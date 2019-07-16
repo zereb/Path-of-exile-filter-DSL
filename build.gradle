@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'free.zereb.java2poefilter'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.marioslab.basis:template:1.7'
+}
