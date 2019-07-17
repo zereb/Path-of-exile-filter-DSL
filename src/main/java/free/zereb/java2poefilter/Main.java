@@ -58,7 +58,7 @@ public class Main {
 
         var topDivCards = List.of(
                 "Abandoned Wealth", "Alluring Bounty", "Beauty Through Death", "Burning Blood", "House of Mirrors", "Hunter's Reward",
-                "Immortal Resolve", "Pride Before the Fall", "Pride of the FirstOnes", "Seven Years Bad Luck", "The Celestial Stone",
+                "Immortal Resolve", "Pride Before the Fall", "Pride of the First Ones", "Seven Years Bad Luck", "The Celestial Stone",
                 "The Doctor", "The Dragon's Heart", "The Fiend", "The Immortal", "The Iron Bard", "The King's Heart", "The Last One Standing",
                 "The Life Thief", "The Nurse", "The Queen", "The Risk", "The Saint's Treasure", "The Samurai's Eye", "The Spark and the Flame",
                 "The Undaunted", "The Undisputed", "The Wolven King's Bite", "The World Eater", "Wealth and Power", "Chaotic Disposition",
@@ -271,11 +271,11 @@ public class Main {
                 .setStyle(Styles.rareGood).print();
         Show.block()
                 .addPropperty("ItemLevel > 84")
-                .addPropperty("Rarity < "+Rarity.Rare)
+                .addPropperty("Rarity < Rare")
                 .baseType(craftingBases)
                 .setStyle(Styles.whiteBases).print();
         Show.block()
-                .addPropperty("Rarity < "+Rarity.Rare)
+                .addPropperty("Rarity < Rare")
                 .baseType(atlasBases)
                 .setStyle(Styles.atlasBases).print();
 

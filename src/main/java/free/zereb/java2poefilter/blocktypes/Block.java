@@ -22,45 +22,45 @@ public abstract class Block {
 
     public Block poeClass(List<String> classes){
         StringBuilder builder = new StringBuilder();
-        classes.forEach(cls -> builder.append(cls).append(" "));
+        classes.forEach(cls -> builder.append(quote(cls)).append(" "));
         data.put("Class", builder.toString().trim());
         return this;
     }
 
     public Block poeClass(String poeClass){
-        data.put("Class", poeClass);
+        data.put("Class", quote(poeClass));
         return this;
     }
 
     public Block hasExplicitMod(String mod){
-        data.put("HasExplicitMod", mod);
+        data.put("HasExplicitMod", quote(mod));
         return this;
     }
 
     public Block hasExplicitMod(List<String> mods){
         StringBuilder builder = new StringBuilder();
-        mods.forEach(mod -> builder.append(mod).append(" "));
-        data.put("BaseType", builder.toString().trim());
+        mods.forEach(mod -> builder.append(quote(mod)).append(" "));
+        data.put("HasExplicitMod", builder.toString().trim());
         return this;
     }
 
 
     public Block baseType(List<String> types){
         StringBuilder builder = new StringBuilder();
-        types.forEach(type -> builder.append(type).append(" "));
+        types.forEach(type -> builder.append(quote(type)).append(" "));
         data.put("BaseType", builder.toString().trim());
         return this;
     }
 
     public Block baseType(String type){
-        data.put("BaseType", type);
+        data.put("BaseType", quote(type));
         return this;
     }
 
 
     public Block Prophecy(List<String> prophecies){
         StringBuilder builder = new StringBuilder();
-        prophecies.forEach(p -> builder.append(p).append(" "));
+        prophecies.forEach(p -> builder.append(quote(p)).append(" "));
         data.put("Prophecy", builder.toString().trim());
         return this;
     }
@@ -76,12 +76,12 @@ public abstract class Block {
     }
 
     public Block elderitem(Boolean b){
-        data.put("Elderitem", b.toString());
+        data.put("ElderItem", b.toString());
         return this;
     }
 
     public Block shaperitem(Boolean b){
-        data.put("Shaperitem", b.toString());
+        data.put("ShaperItem", b.toString());
         return this;
     }
 
@@ -116,5 +116,8 @@ public abstract class Block {
         System.out.println(toString());
     }
 
+    private String quote(String s){
+        return "\""+s+"\"";
+    }
 
 }
