@@ -12,6 +12,7 @@ public class Styles {
     private static AlertSound uniqueSound = new AlertSound(6, 300);
     private static AlertSound exaltSound = new AlertSound(2, 300);
     private static AlertSound chaosSound = new AlertSound(1, 300);
+    private static AlertSound atlasBasesSound = new AlertSound(9, 300);
 
 
 public static Style questItems = new Style()
@@ -155,5 +156,46 @@ public static Style jewelRare = new Style()
         .setBorderColor(new Color(100, 100, 242))
         .setFontSize(45);
 
+ public static Style blueWithMod = new Style()
+         .setTextColor(Color.white)
+         .setBackgroundColor(Color.black)
+         .setBorderColor(new Color(136, 136, 255))
+         .setFontSize(45)
+         .playAlertSound(atlasBasesSound);
+
+ public static Style prophecy = new Style()
+         .setTextColor(Color.black)
+         .setBackgroundColor(new Color(176, 93, 255))
+         .setBorderColor(Color.black)
+         .setFontSize(45)
+         .playAlertSound(chaosSound);
+
+ public static Style mapWhite = new Style()
+         .setTextColor(Color.white)
+         .setBackgroundColor(Color.black)
+         .setFontSize(40)
+         .playAlertSound(mapSound);
+
+ public static Style mapYellow = new Style()
+         .setTextColor(Color.white)
+         .setBackgroundColor(Color.black)
+         .setBorderColor(Color.white)
+         .setFontSize(40)
+         .playAlertSound(mapSound);
+
+ public static Style mapRed = new Style()
+         .setTextColor(new Color(255, 40, 0))
+         .setBackgroundColor(Color.black)
+         .setBorderColor(Color.black)
+         .setFontSize(45)
+         .playAlertSound(mapSound);
+
+ public static Style mapRedend = new Style()
+         .setTextColor(new Color(255, 40, 0))
+         .setBackgroundColor(Color.black)
+         .setBorderColor(new Color(255, 40, 0))
+         .setFontSize(45)
+         .playAlertSound(mapSound)
+         .playEffect(EffectColor.Red);
 
 }

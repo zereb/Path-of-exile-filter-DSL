@@ -16,7 +16,7 @@ public abstract class Block {
     }
 
     public Block rarity(Rarity rarity){
-        data.put("Rarity", rarity.rarity);
+        data.put("Rarity =", rarity.rarity);
         return this;
     }
 
@@ -27,10 +27,33 @@ public abstract class Block {
         return this;
     }
 
+    public Block poeClass(String poeClass){
+        data.put("Class", poeClass);
+        return this;
+    }
+
+    public Block hasExplicitMod(String mod){
+        data.put("HasExplicitMod", mod);
+        return this;
+    }
+
+    public Block hasExplicitMod(List<String> mods){
+        StringBuilder builder = new StringBuilder();
+        mods.forEach(mod -> builder.append(mod).append(" "));
+        data.put("BaseType", builder.toString().trim());
+        return this;
+    }
+
+
     public Block baseType(List<String> types){
         StringBuilder builder = new StringBuilder();
         types.forEach(type -> builder.append(type).append(" "));
         data.put("BaseType", builder.toString().trim());
+        return this;
+    }
+
+    public Block baseType(String type){
+        data.put("BaseType", type);
         return this;
     }
 
@@ -84,7 +107,8 @@ public abstract class Block {
         StringBuilder builder = new StringBuilder();
         builder.append(blockStrart()).append("\n");
         data.forEach((k, v) -> builder.append(k).append(" ").append(v).append("\n"));
-        builder.append(style.toString());
+        if (style != null)
+            builder.append(style.toString());
         return builder.toString();
     }
 

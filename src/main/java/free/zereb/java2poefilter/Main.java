@@ -1,10 +1,14 @@
 package free.zereb.java2poefilter;
 
 import free.zereb.java2poefilter.Styletypes.Style;
+import free.zereb.java2poefilter.blocktypes.Hide;
+import free.zereb.java2poefilter.blocktypes.Rarity;
 import free.zereb.java2poefilter.blocktypes.Show;
 import io.marioslab.basis.template.Template;
 import io.marioslab.basis.template.TemplateLoader;
 
+import java.awt.*;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -13,16 +17,338 @@ public class Main {
     private Main(){
         var vials = List.of(
                 "Vial of Consequence", "Vial of Dominance", "Vial of Fate", "Vial of Summoning", "Vial of the Ritual",
-                "Vial of Transcendence", "Vial of Sacrifice", "Vial of Awakening", "Vial of the Ghost");
+                "Vial of Transcendence", "Vial of Sacrifice", "Vial of Awakening", "Vial of the Ghost"
+        );
 
+        var fossils = List.of(
+                "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil",
+                "Dense Fossil", "Enchanted Fossil", "Encrusted Fossil", "Faceted Fossil", "Fractured Fossil",
+                "Frigid Fossil", "Gilded Fossil", "Glyphic Fossil", "Hollow Fossil", "Jagged Fossil", "Lucent Fossil",
+                "Metallic Fossil", "Perfect Fossil", "Prismatic Fossil", "Pristine Fossil", "Sanctified Fossil", "Scorched Fossil"
+                ,"Serrated Fossil", "Shuddering Fossil", "Tangled Fossil")
+                ;
+
+        var blueMods = List.of("of the Underground", "Subterranean", "of Crafting", "of Spellcraft", "of Weaponcraft",
+                "Citaqualotl", "Guatelitzi", "Matatl", "Puhuarte", "Tacati", "Topotante", "Xopec"
+                );
+
+        var rareMapFragments = List.of("Fragment of the Chimera", "Fragment of the Hydra", "Fragment of the Minotaur", "Fragment of the Phoenix",
+                "Offering to the Goddess", "Divine Vessel", "Mortal Grief", "Mortal Hope", "Mortal Rage", "Mortal Ignorance",
+                "Sacrifice at Midnight", "Eber's Key", "Yriel's Key", "Inya's Key", "Volkuur's Key", "Scarab"
+        );
+
+        var topCurrency = List.of("Mirror of Kalandra", "Eternal Orb", "Divine Orb", "Exalted Orb", "Albino Rhoa Feather", "Harbinger's Orb", "Orb of Annulment" , "Mirror Shard");
+
+        var goodCurrency = List.of("Blessed Orb", "Orb of Fusing", "Orb of Scouring", "Orb of Alchemy", "Cartographer's Chisel",
+                "Glassblower's Bauble", "Sextant", "Silver Coin", "Regal Orb", "Orb of Regret", "Chaos Orb",
+                "Gemcutter's Prism", "Vaal Orb", "Engineer's Orb", "Ancient Orb", "Orb of Binding", "Stacked Deck", "Bestiary Orb",
+                "Orb of Horizons"
+        );
+
+        var mehCurrency = List.of("Orb of Chance", "Orb of Alteration", "Chromatic Orb", "Jeweller's Orb",
+                "Annulment Shard", "Binding Shard", "Horizon Shard", "Harbinger's Shard", "Engineer's Shard", "Ancient Shard", "Chaos Shard"
+        );
+
+        var scarbCurrency = List.of("Armourer's Scrap", "Blacksmith's Whetstone", "Orb of Augmentation", "Orb of Transmutation");
+
+        var scrolls = List.of("Scroll");
+
+
+        var topUniqs = List.of("Quartz Flask", "Ruby Flask", "Sapphire Flask", "Silver Flask", "Stibnite Flask", "Glorious Plate");
+
+        var topDivCards = List.of(
+                "Abandoned Wealth", "Alluring Bounty", "Beauty Through Death", "Burning Blood", "House of Mirrors", "Hunter's Reward",
+                "Immortal Resolve", "Pride Before the Fall", "Pride of the FirstOnes", "Seven Years Bad Luck", "The Celestial Stone",
+                "The Doctor", "The Dragon's Heart", "The Fiend", "The Immortal", "The Iron Bard", "The King's Heart", "The Last One Standing",
+                "The Life Thief", "The Nurse", "The Queen", "The Risk", "The Saint's Treasure", "The Samurai's Eye", "The Spark and the Flame",
+                "The Undaunted", "The Undisputed", "The Wolven King's Bite", "The World Eater", "Wealth and Power", "Chaotic Disposition",
+                "Dark Dreams", "The Cartographer", "The Celestial Justicar", "The Enlightened", "The Mayor", "The Professor", "The Valkyrie",
+                "The Void", "The Wind", "The Wolf"
+        );
+
+        var topIncubators = List.of("Time-Lost Incubator", "Eldritch Incubator", "Foreboding Incubator", "Geomancer's Incubator", "Thaumaturge's Incubator");
+
+        var goodRares = List.of("Astral Plate", "Titan Gauntlets", "Slink Boots", "Slink Gloves", "Titan Greaves", "Dragonscale Boots", "Dragonscale Gauntlets",
+                "Royal Burgonet", "Lion Pelt", "Imperial Skean", "Imbued Wand", "Jewelled Foil", "Vaal Rapier", "Harbinger Bow", "Exquisite Blade",
+                "Fleshripper", "Vaal Axe", "Coronal Maul", "Platinum Kris", "Vaal Regalia", "Sorcerer Boots", "Sorcerer Gloves", "Hubris Circlet",
+                "Titanium Spirit Shield", "Fossilised Spirit Shield", "Crusader Gloves", "Crusader Boots", "Archon Kite Shield",
+                "Lacewood Spirit Shield", "Spike-Point Arrow Quiver", "Sai", "Ambusher", "Demon Dagger", "Ezomyte Dagger",
+                "Nightmare Bascinet", "Solaris Circlet", "Goliath Greaves", "Goliath Gauntlets", "Conjurer Boots", "Conjurer Gloves",
+                "Hydrascale Boots", "Hydrascale Gauntlets", "Stealth Boots", "Stealth Gloves", "Sinner Tricorne", "Eternal Burgonet",
+                "Fingerless Silk Gloves", "Gripped Gloves", "Spiked Gloves", "Two-Toned Boots", "Bone Helmet", "Golden Kris", "Mind Cage"
+        );
+
+        var craftingBases = List.of(
+                "Glorious Plate", "Astral Plate", "Vaal Regalia", "Titanium Spirit Shield", "Colossal Tower Shield", "Hubris Circlet",
+                "Sorcerer Boots", "Titan Greaves", "Eternal Burgonet", "Two-Stone Ring", "Diamond Ring","Archon Kite Shield",
+                "Siege Axe", "Royal Axe", "Fleshripper", "Vaal Axe", "Gemini Claw", "Coronal Maul", "Sai", "Ambusher", "Imperial Staff"
+        );
+
+        var atlasBases = List.of("Opal Ring", "Crystal Belt", "Spiked Gloves", "Gripped Gloves", "Fingerless Silk Gloves", "Vanguard Belt",
+                "Bone Helmet", "Blue Pearl Amulet", "Marble Amulet", "Steel Ring");
+
+
+
+
+        //Legion
+        Show.block()
+                .poeClass("Incubator")
+                .baseType(topIncubators)
+                .setStyle(Styles.currencyExalt).print();
+        Show.block()
+                .poeClass("Incubator")
+                .setStyle(Styles.splinters).print();
 
         //incursion
         Show.block()
-                .baseType(List.of("Stone of Passage"))
+                .baseType("Stone of Passage")
                 .setStyle(Styles.questItems).print();
         Show.block()
                 .baseType(vials)
                 .setStyle(Styles.mapFragmentRare).print();
+        //delve
+        Show.block()
+                .baseType("Timeworn Reliquary Key")
+                .setStyle(Styles.currencyExalt).print();
+        Show.block()
+                .poeClass("Currency")
+                .baseType(fossils)
+                .setStyle(Styles.currecyChaos).print();
+        Show.block()
+                .poeClass("Currency")
+                .baseType("Resonator")
+                .setStyle(Styles.currecyChaos).print();
+       //misc
+        Show.block()
+                .hasExplicitMod(blueMods)
+                .setStyle(Styles.blueWithMod).print();
+        Show.block()
+                .poeClass("Stackable Currency")
+                .baseType("Perandus Coin")
+                .setStyle(Styles.splinters).print();
+        Show.block()
+                .poeClass("Stackable Currency")
+                .baseType("Splinter")
+                .setStyle(Styles.splinters).print();
+        Show.block()
+                .poeClass("Jewel")
+                .rarity(Rarity.Rare)
+                .setStyle(Styles.jewelRare).print();
+        Show.block()
+                .poeClass("Jewel")
+                .rarity(Rarity.Magic)
+                .setStyle(Styles.jewelMagic).print();
+        Show.block()
+                .poeClass("Stackable Currency")
+                .baseType("Blessing")
+                .setStyle(Styles.mapFragmentRare).print();
+        Show.block()
+                .poeClass("Amulets")
+                .baseType("Talisman")
+                .setStyle(new Style()
+                        .setBackgroundColor(Color.black)
+                        .setBorderColor(new Color(50, 230, 100))
+                        .setFontSize(45)
+                ).print();
+        Show.block()
+                .poeClass("Piece")
+                .setStyle(Styles.splinters).print();
+        //topkek
+        Show.block()
+                .addPropperty("LinkedSockets = 6")
+                .setStyle(Styles.currencyExalt).print();
+        Show.block()
+                .addPropperty("Sockets = 6")
+                .setStyle(Styles.utilFlask).print();
+        Show.block()
+                .addPropperty("LinkedSockets = 5")
+                .setStyle(Styles.utilFlask).print();
+
+        //map and fragmets
+        Show.block()
+                .baseType(rareMapFragments)
+                .setStyle(Styles.mapFragmentRare).print();
+        Show.block()
+                .poeClass("Map Fragments")
+                .setStyle(Styles.mapFragmentCommon).print();
+        Show.block()
+                .poeClass("Maps")
+                .rarity(Rarity.Unique)
+                .setStyle(Styles.uniqueChaos).print();
+        Show.block()
+                .poeClass("Maps")
+                .addPropperty("MapTier > 14")
+                .setStyle(Styles.mapRedend).print();
+        Show.block()
+                .poeClass("Maps")
+                .addPropperty("MapTier > 10")
+                .setStyle(Styles.mapRed).print();
+        Show.block()
+                .poeClass("Maps")
+                .addPropperty("MapTier > 5")
+                .setStyle(Styles.mapYellow).print();
+        Show.block()
+                .poeClass("Maps")
+                .setStyle(Styles.mapWhite).print();
+
+        //currency
+        Show.block()
+                .poeClass("Currency")
+                .baseType(topCurrency)
+                .setStyle(Styles.currecyChaos).print();
+        Show.block()
+                .poeClass("Currency")
+                .baseType(goodCurrency)
+                .setStyle(Styles.currecyChaos).print();
+        Show.block()
+                .poeClass("Currency")
+                .baseType(mehCurrency)
+                .setStyle(Styles.currencyAlt).print();
+        Hide.block()
+                .poeClass("Currency")
+                .baseType(scarbCurrency)
+                .setStyle(Styles.currencyAlt).print();
+        Hide.block()
+                .poeClass("Currency")
+                .baseType(scrolls)
+                .setStyle(Styles.currencyAlt).print();
+
+        Show.block()
+                .baseType("Essence of")
+                .setStyle(Styles.essense).print();
+
+        //uniques
+        Show.block()
+                .rarity(Rarity.Unique)
+                .baseType(topUniqs)
+                .setStyle(Styles.uniqueExalt).print();
+        Show.block()
+                .rarity(Rarity.Unique)
+                .setStyle(Styles.uniqueChaos).print();
+
+        Show.block()
+                .poeClass("Divination Card")
+                .baseType(topDivCards)
+                .setStyle(Styles.divcardExalt).print();
+        Show.block()
+                .poeClass("Divination Card")
+                .setStyle(Styles.divCardChaos).print();
+
+        //rares and craftin
+
+        var shaperList = new LinkedList<>(atlasBases);
+        shaperList.addAll(craftingBases);
+
+
+        Show.block()
+                .addPropperty("ItemLevel > 84")
+                .shaperitem(true)
+                .baseType(shaperList)
+                .setStyle(Styles.uniqueExalt);
+        Show.block()
+                .addPropperty("ItemLevel > 84")
+                .elderitem(true)
+                .baseType(shaperList)
+                .setStyle(Styles.uniqueExalt);
+
+        Show.block()
+                .rarity(Rarity.Rare)
+                .shaperitem(true)
+                .setStyle(Styles.elderShaperItem).print();
+        Show.block()
+                .rarity(Rarity.Rare)
+                .elderitem(true)
+                .setStyle(Styles.elderShaperItem).print();
+
+        Show.block()
+                .rarity(Rarity.Rare)
+                .poeClass(List.of("Belts", "Amulets", "Rings"))
+                .setStyle(Styles.jewelRare).print();
+
+        Show.block()
+                .rarity(Rarity.Rare)
+                .baseType(goodRares)
+                .setStyle(Styles.rareGood).print();
+        Show.block()
+                .addPropperty("ItemLevel > 84")
+                .addPropperty("Rarity < "+Rarity.Rare)
+                .baseType(craftingBases)
+                .setStyle(Styles.whiteBases).print();
+        Show.block()
+                .addPropperty("Rarity < "+Rarity.Rare)
+                .baseType(atlasBases)
+                .setStyle(Styles.atlasBases).print();
+
+
+        Show.block()
+                .poeClass("Gem")
+                .baseType(List.of("Enhance", "Empower", "Enlighten"))
+                .setStyle(Styles.gemExalt).print();
+        Show.block()
+                .poeClass("Gem")
+                .addPropperty("Quality > 18")
+                .setStyle(Styles.gemExalt).print();
+        Show.block()
+                .poeClass("Gem")
+                .addPropperty("GemLevel > 19")
+                .setStyle(Styles.gemExalt).print();
+        Show.block()
+                .poeClass("Gem")
+                .baseType(List.of("Portal", "Added Chaos Damage", "Vaal"))
+                .setStyle(Styles.gem).print();
+
+        Show.block()
+                .poeClass(List.of("Quest", "Pantheon Soul"))
+                .setStyle(Styles.questItems).print();
+        Show.block()
+                .baseType(List.of("Silver Key", "Golden Key", "Treasure Key"))
+                .setStyle(Styles.questItems).print();
+
+        Show.block()
+                .addPropperty("Identified True")
+                .rarity(Rarity.Rare);
+
+
+        Hide.block()
+                .rarity(Rarity.Rare).print();
+        Hide.block()
+                .rarity(Rarity.Magic).print();
+        Hide.block()
+                .rarity(Rarity.Normal).print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
