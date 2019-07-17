@@ -34,7 +34,7 @@ public class Main {
 
         var rareMapFragments = List.of("Fragment of the Chimera", "Fragment of the Hydra", "Fragment of the Minotaur", "Fragment of the Phoenix",
                 "Offering to the Goddess", "Divine Vessel", "Mortal Grief", "Mortal Hope", "Mortal Rage", "Mortal Ignorance",
-                "Sacrifice at Midnight", "Eber's Key", "Yriel's Key", "Inya's Key", "Volkuur's Key", "Scarab"
+                "Sacrifice at Midnight", "Eber's Key", "Yriel's Key", "Inya's Key", "Volkuur's Key", "Scarab", "Breachstone", "Emblem"
         );
 
         var topCurrency = List.of("Mirror of Kalandra", "Eternal Orb", "Divine Orb", "Exalted Orb", "Albino Rhoa Feather", "Harbinger's Orb", "Orb of Annulment" , "Mirror Shard");
@@ -189,13 +189,14 @@ public class Main {
                 .setStyle(Styles.mapYellow).print();
         Show.block()
                 .poeClass("Maps")
+                .addPropperty("MapTier >= 0")
                 .setStyle(Styles.mapWhite).print();
 
         //currency
         Show.block()
                 .poeClass("Currency")
                 .baseType(topCurrency)
-                .setStyle(Styles.currecyChaos).print();
+                .setStyle(Styles.currencyExalt).print();
         Show.block()
                 .poeClass("Currency")
                 .baseType(goodCurrency)
@@ -244,12 +245,12 @@ public class Main {
                 .addPropperty("ItemLevel > 84")
                 .shaperitem(true)
                 .baseType(shaperList)
-                .setStyle(Styles.uniqueExalt);
+                .setStyle(Styles.currencyExalt);
         Show.block()
                 .addPropperty("ItemLevel > 84")
                 .elderitem(true)
                 .baseType(shaperList)
-                .setStyle(Styles.uniqueExalt);
+                .setStyle(Styles.currencyExalt);
 
         Show.block()
                 .rarity(Rarity.Rare)
