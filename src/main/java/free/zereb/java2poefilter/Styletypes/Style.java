@@ -21,17 +21,17 @@ public class Style {
 
 
     public Style setTextColor(Color color){
-        result.putIfAbsent(SetTextColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + "255");
+        result.putIfAbsent(SetTextColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + " " + color.getAlpha());
         return this;
     }
 
     public Style setBackgroundColor(Color color){
-        result.putIfAbsent(SetBackgroundColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + "255");
+        result.putIfAbsent(SetBackgroundColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + " " + color.getAlpha());
         return this;
     }
 
     public Style setBorderColor(Color color){
-        result.putIfAbsent(SetBorderColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + "255");
+        result.putIfAbsent(SetBorderColor,color.getRed() + " " + color.getGreen() + " " + color.getBlue() + " " + color.getAlpha());
         return this;
     }
 

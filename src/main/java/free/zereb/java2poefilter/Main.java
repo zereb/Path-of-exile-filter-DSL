@@ -4,17 +4,19 @@ import free.zereb.java2poefilter.Styletypes.Style;
 import free.zereb.java2poefilter.blocktypes.Hide;
 import free.zereb.java2poefilter.blocktypes.Rarity;
 import free.zereb.java2poefilter.blocktypes.Show;
-import io.marioslab.basis.template.Template;
-import io.marioslab.basis.template.TemplateLoader;
 
 import java.awt.*;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 
 
 public class Main {
 
-    private Main(){
+    private Main() throws URISyntaxException, IOException {
         var vials = List.of(
                 "Vial of Consequence", "Vial of Dominance", "Vial of Fate", "Vial of Summoning", "Vial of the Ritual",
                 "Vial of Transcendence", "Vial of Sacrifice", "Vial of Awakening", "Vial of the Ghost"
@@ -53,7 +55,6 @@ public class Main {
 
         var scrolls = List.of("Scroll");
 
-
         var topUniqs = List.of("Quartz Flask", "Ruby Flask", "Sapphire Flask", "Silver Flask", "Stibnite Flask", "Glorious Plate");
 
         var topDivCards = List.of(
@@ -68,20 +69,24 @@ public class Main {
 
         var topIncubators = List.of("Time-Lost Incubator", "Eldritch Incubator", "Foreboding Incubator", "Geomancer's Incubator", "Thaumaturge's Incubator");
 
-        var goodRares = List.of("Astral Plate", "Titan Gauntlets", "Slink Boots", "Slink Gloves", "Titan Greaves", "Dragonscale Boots", "Dragonscale Gauntlets",
-                "Royal Burgonet", "Lion Pelt", "Imperial Skean", "Imbued Wand", "Jewelled Foil", "Vaal Rapier", "Harbinger Bow", "Exquisite Blade",
-                "Fleshripper", "Vaal Axe", "Coronal Maul", "Platinum Kris", "Vaal Regalia", "Sorcerer Boots", "Sorcerer Gloves", "Hubris Circlet",
-                "Titanium Spirit Shield", "Fossilised Spirit Shield", "Crusader Gloves", "Crusader Boots", "Archon Kite Shield",
-                "Lacewood Spirit Shield", "Spike-Point Arrow Quiver", "Sai", "Ambusher", "Demon Dagger", "Ezomyte Dagger",
-                "Nightmare Bascinet", "Solaris Circlet", "Goliath Greaves", "Goliath Gauntlets", "Conjurer Boots", "Conjurer Gloves",
-                "Hydrascale Boots", "Hydrascale Gauntlets", "Stealth Boots", "Stealth Gloves", "Sinner Tricorne", "Eternal Burgonet",
-                "Fingerless Silk Gloves", "Gripped Gloves", "Spiked Gloves", "Two-Toned Boots", "Bone Helmet", "Golden Kris", "Mind Cage"
-        );
 
-        var craftingBases = List.of(
-                "Glorious Plate", "Astral Plate", "Vaal Regalia", "Titanium Spirit Shield", "Colossal Tower Shield", "Hubris Circlet",
-                "Sorcerer Boots", "Titan Greaves", "Eternal Burgonet", "Two-Stone Ring", "Diamond Ring","Archon Kite Shield",
-                "Siege Axe", "Royal Axe", "Fleshripper", "Vaal Axe", "Gemini Claw", "Coronal Maul", "Sai", "Ambusher", "Imperial Staff"
+        var goodBodyArmors = List.of("Astral Plate", "Glorious Plate", "Gladiator Plate", "Assassin's Garb", "Vaal Regalia", "Sacrificial Garb");
+        var goodWeapons = List.of("Behemoth Mace", "Coronal Maul", "Siege Axe", "Vaal Axe", "Fleshripper", "Vaal Blade", "Eternal Sword", "Jewelled Foil", "Vaal Rapier",
+                "Exquisite Blade", "Gemini Claw", "Imperial Claw", "Ambusher", "Sai", "Imperial Staff", "Imbued Wand");
+        var goodArmor = List.of("Fingerless Silk Gloves", "Two-Toned Boots", "Titan Greaves", "Spiked Gloves", "Gripped Gloves", "Royal Burgonet", "Hubris Circlet");
+        var goodshields = List.of("Pinnacle Tower Shield", "Colossal Tower Shield", "Ezomyte Tower Shield", "Titanium Spirit Shield");
+
+
+        var goodRares = new LinkedList<>(goodBodyArmors);
+        goodRares.addAll(goodWeapons);
+        goodRares.addAll(goodArmor);
+        goodRares.addAll(goodshields);
+
+
+
+        var craftingBases = List.of("Astral Plate", "Vaal Regalia", "Titanium Spirit Shield", "Hubris Circlet", "Royal Burgonet",
+                "Two-Stone Ring", "Diamond Ring", "Siege Axe", "Vaal Axe", "Jewelled Foil", "Vall Rapier",
+                "Fleshripper", "Gemini Claw", "Coronal Maul", "Sai", "Ambusher", "Imperial Staff"
         );
 
         var atlasBases = List.of("Opal Ring", "Crystal Belt", "Spiked Gloves", "Gripped Gloves", "Fingerless Silk Gloves", "Vanguard Belt",
@@ -151,9 +156,13 @@ public class Main {
                         .setFontSize(45)
                 ).print();
         Show.block()
+                .poeClass("Stackable Currency")
+                .baseType("Prophecy")
+                .setStyle(Styles.prophecy).print();
+        Show.block()
                 .poeClass("Piece")
                 .setStyle(Styles.splinters).print();
-        //topkek
+        //6 and 5 links
         Show.block()
                 .addPropperty("LinkedSockets = 6")
                 .setStyle(Styles.currencyExalt).print();
@@ -189,7 +198,7 @@ public class Main {
                 .setStyle(Styles.mapYellow).print();
         Show.block()
                 .poeClass("Maps")
-                .addPropperty("MapTier >= 0")
+                .addPropperty("MapTier < 5")
                 .setStyle(Styles.mapWhite).print();
 
         //currency
@@ -245,19 +254,27 @@ public class Main {
                 .addPropperty("ItemLevel > 84")
                 .shaperitem(true)
                 .baseType(shaperList)
-                .setStyle(Styles.currencyExalt);
+                .setStyle(Styles.currencyExalt).print();
         Show.block()
-                .addPropperty("ItemLevel > 84")
+                .addPropperty("ItemLevel >= 84")
                 .elderitem(true)
                 .baseType(shaperList)
-                .setStyle(Styles.currencyExalt);
+                .setStyle(Styles.currencyExalt).print();
+        Show.block()
+                .addPropperty("Rarity < Rare")
+                .addPropperty("ItemLevel >= 84")
+                .baseType(craftingBases)
+                .setStyle(Styles.whiteBases).print();
+        Show.block()
+                .addPropperty("Rarity < Rare")
+                .addPropperty("ItemLevel >= 84")
+                .baseType(atlasBases)
+                .setStyle(Styles.atlasBases).print();
 
         Show.block()
-                .rarity(Rarity.Rare)
                 .shaperitem(true)
                 .setStyle(Styles.elderShaperItem).print();
         Show.block()
-                .rarity(Rarity.Rare)
                 .elderitem(true)
                 .setStyle(Styles.elderShaperItem).print();
 
@@ -270,15 +287,6 @@ public class Main {
                 .rarity(Rarity.Rare)
                 .baseType(goodRares)
                 .setStyle(Styles.rareGood).print();
-        Show.block()
-                .addPropperty("ItemLevel > 84")
-                .addPropperty("Rarity < Rare")
-                .baseType(craftingBases)
-                .setStyle(Styles.whiteBases).print();
-        Show.block()
-                .addPropperty("Rarity < Rare")
-                .baseType(atlasBases)
-                .setStyle(Styles.atlasBases).print();
 
 
         Show.block()
@@ -302,12 +310,28 @@ public class Main {
                 .poeClass(List.of("Quest", "Pantheon Soul"))
                 .setStyle(Styles.questItems).print();
         Show.block()
-                .baseType(List.of("Silver Key", "Golden Key", "Treasure Key"))
+                .baseType(List.of("Silver Key", "Golden Key", "Treasure Key", "Keg"))
                 .setStyle(Styles.questItems).print();
 
         Show.block()
                 .addPropperty("Identified True")
-                .rarity(Rarity.Rare);
+                .rarity(Rarity.Rare).print();
+
+        Hide.block()
+                .addPropperty("ItemLevel >= 35")
+                .poeClass(List.of("Life Flask", "Mana Flask"))
+                .baseType(List.of("Grand", "Greater", "Large", "Medium", "Small")).print();
+         Hide.block()
+                .addPropperty("ItemLevel >= 53")
+                 .poeClass(List.of("Life Flask", "Mana Flask"))
+                .baseType(List.of("Colossal" ,"Giant" ,"Sacred")).print();
+         Hide.block()
+                .addPropperty("ItemLevel >= 67")
+                 .poeClass(List.of("Life Flask", "Mana Flask"))
+                .baseType(List.of("Divine", "Eternal", "Hallowed", "Sanctified")).print();
+
+         String lvl_flask = new String(Files.readAllBytes(Paths.get(getClass().getResource("/lvling_flasks").toURI())));
+         System.out.println(lvl_flask);
 
 
         Hide.block()
@@ -354,7 +378,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, URISyntaxException {
         new Main();
     }
 }

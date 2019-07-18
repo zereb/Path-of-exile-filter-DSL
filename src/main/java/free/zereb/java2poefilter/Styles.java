@@ -173,14 +173,14 @@ public static Style jewelRare = new Style()
  public static Style mapWhite = new Style()
          .setTextColor(Color.white)
          .setBackgroundColor(Color.black)
-         .setFontSize(40)
+         .setFontSize(42)
          .playAlertSound(mapSound);
 
  public static Style mapYellow = new Style()
          .setTextColor(Color.white)
          .setBackgroundColor(Color.black)
          .setBorderColor(Color.white)
-         .setFontSize(40)
+         .setFontSize(42)
          .playAlertSound(mapSound);
 
  public static Style mapRed = new Style()
