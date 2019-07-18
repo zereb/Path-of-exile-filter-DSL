@@ -85,7 +85,7 @@ public class Main {
 
 
         var craftingBases = List.of("Astral Plate", "Vaal Regalia", "Titanium Spirit Shield", "Hubris Circlet", "Royal Burgonet",
-                "Two-Stone Ring", "Diamond Ring", "Siege Axe", "Vaal Axe", "Jewelled Foil", "Vall Rapier",
+                "Two-Stone Ring", "Diamond Ring", "Siege Axe", "Vaal Axe", "Jewelled Foil", "Vaal Rapier",
                 "Fleshripper", "Gemini Claw", "Coronal Maul", "Sai", "Ambusher", "Imperial Staff"
         );
 
