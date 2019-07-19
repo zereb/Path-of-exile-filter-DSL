@@ -5,6 +5,8 @@ import free.zereb.java2poefilter.Styletypes.Style;
 import java.util.HashMap;
 import java.util.List;
 
+import static free.zereb.java2poefilter.Utils.quote;
+
 public abstract class Block {
 
     public HashMap<String, String> data = new HashMap<>();
@@ -116,8 +118,6 @@ public abstract class Block {
         System.out.println(toString());
     }
 
-    private String quote(String s){
-        return "\""+s+"\"";
-    }
+
 
 }

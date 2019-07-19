@@ -198,4 +198,15 @@ public static Style jewelRare = new Style()
          .playAlertSound(mapSound)
          .playEffect(EffectColor.Red);
 
+
+ public static Style levleling = new Style()
+         .setBackgroundColor(Color.black)
+         .setBorderColor(Color.YELLOW)
+         .setFontSize(40);
+
+ public static Style levlelingFasks = new Style()
+         .setBackgroundColor(Color.black)
+         .setBorderColor(Color.GRAY)
+         .setFontSize(40);
+
 }
