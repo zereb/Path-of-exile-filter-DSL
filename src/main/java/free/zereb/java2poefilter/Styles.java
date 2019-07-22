@@ -209,4 +209,14 @@ public static Style jewelRare = new Style()
          .setBorderColor(Color.GRAY)
          .setFontSize(40);
 
+ public static Style manaFlasks = new Style()
+         .setBackgroundColor(Color.black)
+         .setBorderColor(new Color(0,0,120))
+         .setFontSize(45);
+
+ public static Style lifeFlasks = new Style()
+         .setBorderColor(Color.black)
+         .setBorderColor(new Color(120, 0 ,0))
+         .setFontSize(45);
+
 }

@@ -7,9 +7,11 @@ import free.zereb.java2poefilter.blocktypes.Show;
 
 import java.awt.*;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import static free.zereb.java2poefilter.BaseTypes.*;
@@ -21,6 +23,10 @@ import static free.zereb.java2poefilter.ItemMods.*;
 public class Main {
 
     private Main() throws URISyntaxException, IOException {
+        PrintStream fileOut = new PrintStream("./j2pf.filter");
+        System.setOut(fileOut);
+
+
         var vials = List.of(
                 VialofConsequence, VialofDominance, VialofFate, VialofSummoning, VialoftheRitual,
                 VialofTranscendence, VialofSacrifice, VialofAwakening, VialoftheGhost
@@ -68,13 +74,11 @@ public class Main {
         var topUniqs = List.of(SapphireFlask, StibniteFlask, GraniteFlask, GloriousPlate, SadistGarb, FullDragonscale, OccultistsVestment);
 
         var topDivCards = List.of(
-                "Abandoned Wealth", "Alluring Bounty", "Beauty Through Death", "Burning Blood", "House of Mirrors", "Hunter's Reward",
-                "Immortal Resolve", "Pride Before the Fall", "Pride of the First Ones", "Seven Years Bad Luck", "The Celestial Stone",
-                "The Doctor", "The Dragon's Heart", "The Fiend", "The Immortal", "The Iron Bard", "The King's Heart", "The Last One Standing",
-                "The Life Thief", "The Nurse", "The Queen", "The Risk", "The Saint's Treasure", "The Samurai's Eye", "The Spark and the Flame",
-                "The Undaunted", "The Undisputed", "The Wolven King's Bite", "The World Eater", "Wealth and Power", "Chaotic Disposition",
-                "Dark Dreams", "The Cartographer", "The Celestial Justicar", "The Enlightened", "The Mayor", "The Professor", "The Valkyrie",
-                "The Void", "The Wind", "The Wolf"
+                AbandonedWealth, AlluringBounty, BeautyThroughDeath, BurningBlood, HouseofMirrors, HuntersReward, ImmortalResolve, PrideBeforetheFall
+                ,PrideoftheFirstOnes, SevenYearsBadLuck, TheCelestialStone,TheDoctor, TheDragonsHeart, TheFiend, TheImmortal, TheIronBard, TheKingsHeart,
+                TheLastOneStanding, TheLifeThief, TheNurse, TheQueen, TheRisk, TheSaintsTreasure, TheSamuraisEye, TheSparkandtheFlame, TheUndaunted,
+                TheUndisputed, TheWolvenKingsBite, TheWorldEater, WealthandPower, ChaoticDisposition, DarkDreams, TheCartographer, TheCelestialJusticar,
+                TheEnlightened, TheMayor, TheProfessor, TheValkyrie, TheVoid, TheWind, TheWolf
         );
 
         var topIncubators = List.of(TimeLostIncubator, EldritchIncubator, ForebodingIncubator, GeomancersIncubator, ThaumaturgesIncubator);
@@ -104,6 +108,7 @@ public class Main {
                 OpalRing, CrystalBelt, SpikedGloves, GrippedGloves, FingerlessSilkGloves, VanguardBelt, BoneHelmet,
                 BluePearlAmulet, MarbleAmulet, SteelRing
         );
+
 
 
         //Legion
@@ -328,82 +333,69 @@ public class Main {
                 .addPropperty("Identified True")
                 .rarity(Rarity.Rare).print();
 
-        Hide.block()
-                .addPropperty("ItemLevel >= 35")
-                .poeClass(List.of(LifeFlasks, ManaFlasks))
-                .baseType(List.of("Grand", "Greater", "Large", "Medium", "Small")).print();
-        Hide.block()
-                .addPropperty("ItemLevel >= 53")
-                 .poeClass(List.of(LifeFlasks, ManaFlasks))
-                .baseType(List.of("Colossal" ,"Giant" ,"Sacred")).print();
-        Hide.block()
-                .addPropperty("ItemLevel >= 67")
-                .poeClass(List.of(LifeFlasks, ManaFlasks))
-                .baseType(List.of("Divine", "Eternal", "Hallowed", "Sanctified")).print();
 
-        String lvl_flask = new String(Files.readAllBytes(Paths.get(getClass().getResource("/lvling_flasks").toURI())));
-        System.out.println(lvl_flask);
+        HashMap<Integer, String> lifeFlasks = new HashMap<>();
+        HashMap<Integer, String> manaFlasks = new HashMap<>();
+
+        lifeFlasks.put(4, SmallLifeFlask);
+        lifeFlasks.put(8, MediumLifeFlask);
+        lifeFlasks.put(13, LargeLifeFlask);
+        lifeFlasks.put(19, GreaterLifeFlask);
+        lifeFlasks.put(25, GrandLifeFlask);
+        lifeFlasks.put(31, GiantLifeFlask);
+        lifeFlasks.put(37, ColossalLifeFlask);
+        lifeFlasks.put(43, SacredLifeFlask);
+        lifeFlasks.put(51, HallowedLifeFlask);
+        lifeFlasks.put(61, SanctifiedLifeFlask);
+        lifeFlasks.put(68, DivineLifeFlask);
+
+        manaFlasks.put(4, SmallManaFlask);
+        manaFlasks.put(8, MediumManaFlask);
+        manaFlasks.put(13, LargeManaFlask);
+        manaFlasks.put(19, GreaterManaFlask);
+        manaFlasks.put(25, GrandManaFlask);
+        manaFlasks.put(31, GiantManaFlask);
+        manaFlasks.put(37, ColossalManaFlask);
+        manaFlasks.put(43, SacredManaFlask);
+        manaFlasks.put(51, HallowedLifeFlask);
+        manaFlasks.put(61, SanctifiedManaFlask);
+        manaFlasks.put(68, DivineManaFlask);
+
+        lifeFlasks.forEach((k, v) -> Show.block()
+                .addPropperty("ItemLevel < " + k.toString())
+                .baseType(v)
+                .setStyle(Styles.lifeFlasks).print()
+        );
+
+        manaFlasks.forEach((k, v) -> Show.block()
+                .addPropperty("ItemLevel < " + k.toString())
+                .baseType(v)
+                .setStyle(Styles.manaFlasks).print()
+        );
+
+
 
         Show.block()
                 .addPropperty("ItemLevel < 68")
                 .poeClass(UtilityFlasks)
-                .baseType(List.of(GraniteFlask, BasaltFlask, DiamondFlask, SilverFlask, QuicksilverFlask, JadeFlask, StibniteFlask))
                 .setStyle(Styles.levlelingFasks).print();
         Show.block()
                 .addPropperty("ItemLevel < 68")
-                .baseType(RusticSash)
+                .baseType(List.of(RusticSash, SharktoothArrowQuiver))
                 .setStyle(Styles.levleling).print();
 
-
-
-
-
         Hide.block()
+                .addPropperty("ItemLevel < 68")
                 .rarity(Rarity.Rare).print();
         Hide.block()
+                .addPropperty("ItemLevel < 20")
                 .rarity(Rarity.Magic).print();
         Hide.block()
                 .rarity(Rarity.Normal).print();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
+
     public static void main(String[] args) throws IOException, URISyntaxException {
-        Utils.creteJavaObjects(ItemMods.url);
         new Main();
     }
 }
