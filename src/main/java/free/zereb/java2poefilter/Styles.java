@@ -173,6 +173,7 @@ public static Style jewelRare = new Style()
  public static Style mapWhite = new Style()
          .setTextColor(Color.white)
          .setBackgroundColor(Color.black)
+         .setBorderColor(Color.black)
          .setFontSize(42)
          .playAlertSound(mapSound);
 

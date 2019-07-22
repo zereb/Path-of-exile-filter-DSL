@@ -9,8 +9,6 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -43,7 +41,7 @@ public class Main {
                 oftheUnderground, Subterranean, ofCrafting, ofSpellcraft, ofWeaponcraft, // <- delve
                 "Citaqualotl", "Guatelitzi", "Matatl", "Puhuarte", "Tacati", "Topotante", "Xopec", // <- incursion
                 Brinerot, Mutewind, Redblade, // <- warbands
-                Merciless, Tyrannical, Dictators // <- weapon worth mulltimoding
+                Merciless, Tyrannical, Dictators, Emperors, Flaring // <- weapon
         );
 
         var rareMapFragments = List.of(
