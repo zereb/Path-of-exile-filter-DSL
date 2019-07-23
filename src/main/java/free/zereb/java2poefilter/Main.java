@@ -384,10 +384,10 @@ public class Main {
                 .baseType(List.of(RusticSash, SharktoothArrowQuiver))
                 .setStyle(Styles.levleling).print();
 
-        Hide.block()
+        Show.block()
                 .addPropperty("ItemLevel < 68")
                 .rarity(Rarity.Rare).print();
-        Hide.block()
+        Show.block()
                 .addPropperty("ItemLevel < 20")
                 .rarity(Rarity.Magic).print();
         Hide.block()
