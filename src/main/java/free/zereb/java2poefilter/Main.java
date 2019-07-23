@@ -212,7 +212,7 @@ public class Main {
                 .setStyle(Styles.mapYellow).print();
         Show.block()
                 .poeClass(Maps)
-                .addPropperty("MapTier < 5")
+                .addPropperty("MapTier >= 1")
                 .setStyle(Styles.mapWhite).print();
 
         //currency
@@ -228,13 +228,15 @@ public class Main {
                 .poeClass(Currency)
                 .baseType(mehCurrency)
                 .setStyle(Styles.currencyAlt).print();
-        Hide.block()
+        Show.block()
                 .poeClass(Currency)
                 .baseType(scarbCurrency)
+                .addPropperty("ItemLevel < 75")
                 .setStyle(Styles.currencyAlt).print();
-        Hide.block()
+        Show.block()
                 .poeClass(Currency)
                 .baseType(scrolls)
+                .addPropperty("ItemLevel < 75")
                 .setStyle(Styles.currencyAlt).print();
 
         Show.block()
