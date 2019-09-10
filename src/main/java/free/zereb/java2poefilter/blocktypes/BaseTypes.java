@@ -2074,5 +2074,8 @@ public class BaseTypes {
     public static final String ZealotHelmet ="Zealot Helmet";
     public static final String Zealotry ="Zealotry";
     public static final String ZodiacLeather ="Zodiac Leather";
+    public static final String ConvokingWand ="Convoking Wand";
+    public static final String CeruleanRing = "Cerulean Ring";
+    public static final String VermillionRing ="Vermillion Ring";
 
 }

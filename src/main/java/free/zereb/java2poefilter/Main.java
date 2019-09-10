@@ -104,10 +104,15 @@ public class Main {
 
         var atlasBases = List.of(
                 OpalRing, CrystalBelt, SpikedGloves, GrippedGloves, FingerlessSilkGloves, VanguardBelt, BoneHelmet,
-                BluePearlAmulet, MarbleAmulet, SteelRing
+                BluePearlAmulet, MarbleAmulet, SteelRing, ConvokingWand, VermillionRing, CeruleanRing
         );
 
 
+        //Blight
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType("Oil")
+                .setStyle(Styles.splinters);
 
         //Legion
         Show.block()
@@ -390,7 +395,7 @@ public class Main {
         Show.block()
                 .addPropperty("ItemLevel < 20")
                 .rarity(Rarity.Magic).print();
-        Hide.block()
+        Show.block()
                 .rarity(Rarity.Normal).print();
     }
 
