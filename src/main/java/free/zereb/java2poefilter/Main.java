@@ -104,10 +104,15 @@ public class Main {
 
         var atlasBases = List.of(
                 OpalRing, CrystalBelt, SpikedGloves, GrippedGloves, FingerlessSilkGloves, VanguardBelt, BoneHelmet,
-                BluePearlAmulet, MarbleAmulet, SteelRing
+                BluePearlAmulet, MarbleAmulet, SteelRing, ConvokingWand, VermillionRing, CeruleanRing
         );
 
 
+        //Blight
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType("Oil")
+                .setStyle(Styles.splinters);
 
         //Legion
         Show.block()
@@ -228,11 +233,11 @@ public class Main {
                 .poeClass(Currency)
                 .baseType(mehCurrency)
                 .setStyle(Styles.currencyAlt).print();
-        Hide.block()
+        Show.block()
                 .poeClass(Currency)
                 .baseType(scarbCurrency)
                 .setStyle(Styles.currencyAlt).print();
-        Hide.block()
+        Show.block()
                 .poeClass(Currency)
                 .baseType(scrolls)
                 .setStyle(Styles.currencyAlt).print();
@@ -382,13 +387,13 @@ public class Main {
                 .baseType(List.of(RusticSash, SharktoothArrowQuiver))
                 .setStyle(Styles.levleling).print();
 
-        Hide.block()
+        Show.block()
                 .addPropperty("ItemLevel < 68")
                 .rarity(Rarity.Rare).print();
-        Hide.block()
+        Show.block()
                 .addPropperty("ItemLevel < 20")
                 .rarity(Rarity.Magic).print();
-        Hide.block()
+        Show.block()
                 .rarity(Rarity.Normal).print();
     }
 
