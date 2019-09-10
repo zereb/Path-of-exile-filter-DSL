@@ -12,9 +12,9 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import static free.zereb.java2poefilter.BaseTypes.*;
-import static free.zereb.java2poefilter.ItemClasses.*;
-import static free.zereb.java2poefilter.ItemMods.*;
+import static free.zereb.java2poefilter.blocktypes.BaseTypes.*;
+import static free.zereb.java2poefilter.blocktypes.ItemClasses.*;
+import static free.zereb.java2poefilter.blocktypes.ItemMods.*;
 
 
 

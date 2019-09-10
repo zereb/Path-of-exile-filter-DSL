@@ -62,7 +62,7 @@ SetBackgroundColor 213 159 0 255
 SetBorderColor 0 0 0 255
 
 Show
-HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's"
+HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's" "Emperor's" "Flaring"
 PlayAlertSound 9 300
 SetTextColor 255 255 255 255
 SetFontSize 45
@@ -207,12 +207,13 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 255 255
 
 Show
- MapTier < 5
+ MapTier >= 1
 Class "Maps"
 PlayAlertSound 4 300
 SetTextColor 255 255 255 255
 SetFontSize 42
 SetBackgroundColor 0 0 0 255
+SetBorderColor 0 0 0 255
 
 Show
 BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Harbinger's Orb" "Orb of Annulment" "Mirror Shard"
@@ -240,13 +241,15 @@ Class "Currency"
 SetTextColor 170 158 130 255
 SetFontSize 40
 
-Hide
+Show
+ ItemLevel < 75
 BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
 Class "Currency"
 SetTextColor 170 158 130 255
 SetFontSize 40
 
-Hide
+Show
+ ItemLevel < 75
 BaseType "Scroll"
 Class "Currency"
 SetTextColor 170 158 130 255
@@ -584,11 +587,11 @@ SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
-Hide
+Show
  ItemLevel < 68
 Rarity = Rare
 
-Hide
+Show
  ItemLevel < 20
 Rarity = Magic
 

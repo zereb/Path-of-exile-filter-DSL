@@ -1,4 +1,4 @@
-package free.zereb.java2poefilter;
+package free.zereb.java2poefilter.blocktypes;
 
 public class BaseTypes {
     public static final String url = "https://raw.githubusercontent.com/ben-wallis/Filtration/master/Filtration/Resources/ItemBaseTypes.txt";
