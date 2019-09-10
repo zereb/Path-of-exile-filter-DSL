@@ -381,11 +381,11 @@ public class Main {
 
 
         Show.block()
-                .addPropperty("ItemLevel < 68")
+                .addPropperty("ItemLevel < 72")
                 .poeClass(UtilityFlasks)
                 .setStyle(Styles.levlelingFasks).print();
         Show.block()
-                .addPropperty("ItemLevel < 68")
+                .addPropperty("ItemLevel < 35")
                 .baseType(List.of(RusticSash, SharktoothArrowQuiver))
                 .setStyle(Styles.levleling).print();
 
@@ -396,6 +396,7 @@ public class Main {
                 .addPropperty("ItemLevel < 20")
                 .rarity(Rarity.Magic).print();
         Show.block()
+                .addPropperty("ItemLevel < 10")
                 .rarity(Rarity.Normal).print();
     }
 
