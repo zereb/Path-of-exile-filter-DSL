@@ -1,7 +1,7 @@
 # j2pf
 Path of exile filter in java
 
-#Example usage:
+# Example usage:
 
 ```java
 Show.block()
@@ -16,7 +16,7 @@ Show.block()
           .setStyle(Styles.currencyExalt).print();
 
 ```
-#Example style
+# Example style
 ```java
 public static Style currencyExalt = new Style()
         .setTextColor(Color.RED)
@@ -28,7 +28,7 @@ public static Style currencyExalt = new Style()
         .playEffect(EffectColor.Red); //beam effect
 ```
 
-#You can utilize java lists like this
+# You can utilize java lists like this
 ```java
 var craftingBases = List.of(
                 AstralPlate, VaalRegalia, TitanGauntlets, HubrisCirclet, TwoStoneRing, DiamondRing,
