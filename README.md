@@ -28,7 +28,7 @@ public static Style currencyExalt = new Style()
         .playEffect(EffectColor.Red); //beam effect
 ```
 
-#You can utelize java lists like this
+#You can utilize java lists like this
 ```java
 var craftingBases = List.of(
                 AstralPlate, VaalRegalia, TitanGauntlets, HubrisCirclet, TwoStoneRing, DiamondRing,
