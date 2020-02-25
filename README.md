@@ -40,3 +40,5 @@ Show.block()
           .addPropperty("ItemLevel >= 84")
           .baseType(craftingBases)
           .setStyle(Styles.whiteBases).print();
+```
+For more exaple: https://github.com/zereb/j2pf/blob/master/src/main/java/free/zereb/java2poefilter/Main.java
