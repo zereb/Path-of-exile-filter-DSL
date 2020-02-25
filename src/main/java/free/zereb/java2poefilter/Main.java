@@ -112,7 +112,7 @@ public class Main {
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType("Oil")
-                .setStyle(Styles.splinters);
+                .setStyle(Styles.splinters).print();
 
         //Legion
         Show.block()
