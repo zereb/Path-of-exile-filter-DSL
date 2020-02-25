@@ -15,24 +15,4 @@ public class Utils {
         return "\""+s+"\"";
     }
 
-    public static void creteJavaObjects(String url){
-        HttpClient httpClient = HttpClient.newBuilder()
-                .build();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .build();
-        try {
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            for (String line: response.body().split("\n")){
-                String forJava = line.replaceAll(" ", "")
-                        .replaceAll("'", "")
-                        .replaceAll(",","")
-                        .replaceAll("-","");
-                System.out.println("public static final String "+forJava+" ="+quote(line.trim())+";");
-            }
-            System.exit(0);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
