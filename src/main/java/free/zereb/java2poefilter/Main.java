@@ -108,11 +108,28 @@ public class Main {
         );
 
 
+
+        //delirium
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType("Delirium Orb")
+                .setStyle(Styles.currecyChaos).print();
+
+        Show.block()
+                .poeClass(MapFragments)
+                .baseType("Simulacrum")
+                .setStyle(Styles.splinters).print();
+
+        Show.block()
+                .poeClass(Jewel)
+                .baseType("Cluster")
+                .setStyle(Styles.gem).print();
+
         //Blight
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType("Oil")
-                .setStyle(Styles.splinters);
+                .setStyle(Styles.splinters).print();
 
         //Legion
         Show.block()

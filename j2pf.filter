@@ -1,70 +1,101 @@
 Show
+BaseType "Delirium Orb"
+Class "Stackable Currency"
+PlayAlertSound 2 300
+SetTextColor 1 0 0 255
+SetFontSize 46
+SetBackgroundColor 214 159 0 255
+SetBorderColor 1 0 0 255
+
+Show
+BaseType "Simulacrum"
+Class "Map Fragments"
+SetTextColor 232 180 120 255
+SetFontSize 46
+SetBackgroundColor 1 0 0 255
+SetBorderColor 232 180 120 255
+
+Show
+BaseType "Cluster"
+Class "Jewel"
+SetFontSize 46
+SetBorderColor 31 150 180 255
+
+Show
+BaseType "Oil"
+Class "Stackable Currency"
+SetTextColor 232 180 120 255
+SetFontSize 46
+SetBackgroundColor 1 0 0 255
+SetBorderColor 232 180 120 255
+
+Show
 BaseType "Time-Lost Incubator" "Eldritch Incubator" "Foreboding Incubator" "Geomancer's Incubator" "Thaumaturge's Incubator"
 Class "Incubator"
-PlayAlertSound 2 300
-SetTextColor 255 0 0 255
-SetFontSize 45
+PlayAlertSound 3 300
+SetTextColor 256 0 0 255
+SetFontSize 46
 PlayEffect Red
-SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Red Star
-SetBorderColor 255 0 0 255
+SetBackgroundColor 256 255 255 255
+MinimapIcon 1 Red Star
+SetBorderColor 256 0 0 255
 
 Show
 Class "Incubator"
-SetTextColor 231 180 120 255
-SetFontSize 45
-SetBackgroundColor 0 0 0 255
-SetBorderColor 231 180 120 255
+SetTextColor 232 180 120 255
+SetFontSize 46
+SetBackgroundColor 1 0 0 255
+SetBorderColor 232 180 120 255
 
 Show
 BaseType "Stone of Passage"
-SetTextColor 74 230 56 255
-SetFontSize 45
+SetTextColor 75 230 56 255
+SetFontSize 46
 PlayEffect Green
-MinimapIcon 0 Green Circle
-SetBorderColor 74 230 56 255
+MinimapIcon 1 Green Circle
+SetBorderColor 75 230 56 255
 
 Show
 BaseType "Vial of Consequence" "Vial of Dominance" "Vial of Fate" "Vial of Summoning" "Vial of the Ritual" "Vial of Transcendence" "Vial of Sacrifice" "Vial of Awakening" "Vial of the Ghost"
-PlayAlertSound 6 300
-SetFontSize 45
+PlayAlertSound 7 300
+SetFontSize 46
 PlayEffect White
-SetBackgroundColor 0 0 0 255
-MinimapIcon 0 White Hexagon
-SetBorderColor 0 255 255 255
+SetBackgroundColor 1 0 0 255
+MinimapIcon 1 White Hexagon
+SetBorderColor 1 255 255 255
 
 Show
 BaseType "Timeworn Reliquary Key"
-PlayAlertSound 2 300
-SetTextColor 255 0 0 255
-SetFontSize 45
+PlayAlertSound 3 300
+SetTextColor 256 0 0 255
+SetFontSize 46
 PlayEffect Red
-SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Red Star
-SetBorderColor 255 0 0 255
+SetBackgroundColor 256 255 255 255
+MinimapIcon 1 Red Star
+SetBorderColor 256 0 0 255
 
 Show
 BaseType "Aberrant Fossil" "Aetheric Fossil" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Dense Fossil" "Enchanted Fossil" "Encrusted Fossil" "Faceted Fossil" "Fractured Fossil" "Frigid Fossil" "Gilded Fossil" "Glyphic Fossil" "Hollow Fossil" "Jagged Fossil" "Lucent Fossil" "Metallic Fossil" "Perfect Fossil" "Prismatic Fossil" "Pristine Fossil" "Sanctified Fossil" "Scorched Fossil" "Serrated Foil" "Shuddering Fossil" "Tangled Fossil"
 Class "Currency"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 45
-SetBackgroundColor 213 159 0 255
-SetBorderColor 0 0 0 255
+PlayAlertSound 2 300
+SetTextColor 1 0 0 255
+SetFontSize 46
+SetBackgroundColor 214 159 0 255
+SetBorderColor 1 0 0 255
 
 Show
 BaseType "Resonator"
 Class "Currency"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 45
-SetBackgroundColor 213 159 0 255
-SetBorderColor 0 0 0 255
+PlayAlertSound 2 300
+SetTextColor 1 0 0 255
+SetFontSize 46
+SetBackgroundColor 214 159 0 255
+SetBorderColor 1 0 0 255
 
 Show
 HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's" "Emperor's" "Flaring"
-PlayAlertSound 9 300
-SetTextColor 255 255 255 255
+PlayAlertSound 10 300
+SetTextColor 256 255 255 256
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
 SetBorderColor 136 136 255 255
