@@ -1,9 +1,7 @@
 package free.zereb.java2poefilter;
 
 import free.zereb.java2poefilter.Styletypes.Style;
-import free.zereb.java2poefilter.blocktypes.Hide;
-import free.zereb.java2poefilter.blocktypes.Rarity;
-import free.zereb.java2poefilter.blocktypes.Show;
+import free.zereb.java2poefilter.blocktypes.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -21,6 +19,7 @@ import static free.zereb.java2poefilter.blocktypes.ItemMods.*;
 public class Main {
 
     private Main() throws URISyntaxException, IOException {
+//        System.out.println(Utils.genBaseTypes(BaseTypes.url));
         PrintStream fileOut = new PrintStream("./j2pf.filter");
         System.setOut(fileOut);
 
@@ -54,10 +53,15 @@ public class Main {
                 MirrorofKalandra, EternalOrb, DivineOrb, ExaltedOrb, AlbinoRhoaFeather, HarbingersOrb, OrbofAnnulment, MirrorShard
         );
 
+        var Oils = List.of(
+                AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil
+        );
+
         var goodCurrency = List.of(
                 BlessedOrb, OrbofFusing, OrbofScouring, OrbofAlchemy, CartographersChisel, GlassblowersBauble, "Sextant",
                 SilverCoin, RegalOrb, OrbofRegret, ChaosOrb, GemcuttersPrism, VaalOrb, EngineersOrb, AncientOrb, OrbofBinding,
-                StackedDeck, BestiaryOrb, OrbofHorizons
+                StackedDeck, BestiaryOrb, OrbofHorizons, ExaltedShard, "Catalyst"
+                //AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil
         );
 
         var mehCurrency = List.of(
@@ -128,7 +132,7 @@ public class Main {
         //Blight
         Show.block()
                 .poeClass(StackableCurrency)
-                .baseType("Oil")
+                .baseType(Oils)
                 .setStyle(Styles.splinters).print();
 
         //Legion
@@ -265,6 +269,7 @@ public class Main {
                 .baseType("Essence of")
                 .setStyle(Styles.essense).print();
 
+
         //uniques
         Show.block()
                 .rarity(Rarity.Unique)
@@ -396,6 +401,7 @@ public class Main {
         );
 
 
+//todo influences and melee 2 hand leveling
 
         Show.block()
                 .addPropperty("ItemLevel < 72")
@@ -410,10 +416,10 @@ public class Main {
                 .addPropperty("ItemLevel < 68")
                 .rarity(Rarity.Rare).print();
         Show.block()
-                .addPropperty("ItemLevel < 20")
+                .addPropperty("ItemLevel < 15")
                 .rarity(Rarity.Magic).print();
         Show.block()
-                .addPropperty("ItemLevel < 10")
+                .addPropperty("ItemLevel < 3")
                 .rarity(Rarity.Normal).print();
     }
 

@@ -22,6 +22,7 @@ public class ItemClasses {
     public static final String Currency ="Currency";
     public static final String Daggers ="Daggers";
     public static final String DelveSocketableCurrency ="Delve Socketable Currency";
+    public static final String DelveStackableSocketableCurrency ="Delve Stackable Socketable Currency";
     public static final String DivinationCard ="Divination Card";
     public static final String FishingRods ="Fishing Rods";
     public static final String Flasks ="Flasks";
@@ -66,6 +67,9 @@ public class ItemClasses {
     public static final String TwoHandSwords ="Two Hand Swords";
     public static final String UtilityFlasks ="Utility Flasks";
     public static final String Wands ="Wands";
+    public static final String Warstaff ="Warstaff";
+    public static final String RuneDagger ="Rune Dagger";
+    public static final String AtlasRegionUpgradeItem ="Atlas Region Upgrade Item";
 
 
 }

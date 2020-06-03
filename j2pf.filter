@@ -1,101 +1,101 @@
 Show
 BaseType "Delirium Orb"
 Class "Stackable Currency"
-PlayAlertSound 2 300
-SetTextColor 1 0 0 255
-SetFontSize 46
-SetBackgroundColor 214 159 0 255
-SetBorderColor 1 0 0 255
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+SetBackgroundColor 213 159 0 255
+SetBorderColor 0 0 0 255
 
 Show
 BaseType "Simulacrum"
 Class "Map Fragments"
-SetTextColor 232 180 120 255
-SetFontSize 46
-SetBackgroundColor 1 0 0 255
-SetBorderColor 232 180 120 255
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 231 180 120 255
 
 Show
 BaseType "Cluster"
 Class "Jewel"
-SetFontSize 46
-SetBorderColor 31 150 180 255
+SetFontSize 45
+SetBorderColor 30 150 180 255
 
 Show
-BaseType "Oil"
+BaseType "Amber Oil" "Azure Oil" "Black Oil" "Clear Oil" "Crimson Oil" "Golden Oil" "Opalescent Oil" "Sepia Oil" "Silver Oil" "Teal Oil" "Verdant Oil" "Violet Oil"
 Class "Stackable Currency"
-SetTextColor 232 180 120 255
-SetFontSize 46
-SetBackgroundColor 1 0 0 255
-SetBorderColor 232 180 120 255
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 231 180 120 255
 
 Show
 BaseType "Time-Lost Incubator" "Eldritch Incubator" "Foreboding Incubator" "Geomancer's Incubator" "Thaumaturge's Incubator"
 Class "Incubator"
-PlayAlertSound 3 300
-SetTextColor 256 0 0 255
-SetFontSize 46
+PlayAlertSound 2 300
+SetTextColor 255 0 0 255
+SetFontSize 45
 PlayEffect Red
-SetBackgroundColor 256 255 255 255
-MinimapIcon 1 Red Star
-SetBorderColor 256 0 0 255
+SetBackgroundColor 255 255 255 255
+MinimapIcon 0 Red Star
+SetBorderColor 255 0 0 255
 
 Show
 Class "Incubator"
-SetTextColor 232 180 120 255
-SetFontSize 46
-SetBackgroundColor 1 0 0 255
-SetBorderColor 232 180 120 255
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 231 180 120 255
 
 Show
 BaseType "Stone of Passage"
-SetTextColor 75 230 56 255
-SetFontSize 46
+SetTextColor 74 230 56 255
+SetFontSize 45
 PlayEffect Green
-MinimapIcon 1 Green Circle
-SetBorderColor 75 230 56 255
+MinimapIcon 0 Green Circle
+SetBorderColor 74 230 56 255
 
 Show
 BaseType "Vial of Consequence" "Vial of Dominance" "Vial of Fate" "Vial of Summoning" "Vial of the Ritual" "Vial of Transcendence" "Vial of Sacrifice" "Vial of Awakening" "Vial of the Ghost"
-PlayAlertSound 7 300
-SetFontSize 46
+PlayAlertSound 6 300
+SetFontSize 45
 PlayEffect White
-SetBackgroundColor 1 0 0 255
-MinimapIcon 1 White Hexagon
-SetBorderColor 1 255 255 255
+SetBackgroundColor 0 0 0 255
+MinimapIcon 0 White Hexagon
+SetBorderColor 0 255 255 255
 
 Show
 BaseType "Timeworn Reliquary Key"
-PlayAlertSound 3 300
-SetTextColor 256 0 0 255
-SetFontSize 46
+PlayAlertSound 2 300
+SetTextColor 255 0 0 255
+SetFontSize 45
 PlayEffect Red
-SetBackgroundColor 256 255 255 255
-MinimapIcon 1 Red Star
-SetBorderColor 256 0 0 255
+SetBackgroundColor 255 255 255 255
+MinimapIcon 0 Red Star
+SetBorderColor 255 0 0 255
 
 Show
 BaseType "Aberrant Fossil" "Aetheric Fossil" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Dense Fossil" "Enchanted Fossil" "Encrusted Fossil" "Faceted Fossil" "Fractured Fossil" "Frigid Fossil" "Gilded Fossil" "Glyphic Fossil" "Hollow Fossil" "Jagged Fossil" "Lucent Fossil" "Metallic Fossil" "Perfect Fossil" "Prismatic Fossil" "Pristine Fossil" "Sanctified Fossil" "Scorched Fossil" "Serrated Foil" "Shuddering Fossil" "Tangled Fossil"
 Class "Currency"
-PlayAlertSound 2 300
-SetTextColor 1 0 0 255
-SetFontSize 46
-SetBackgroundColor 214 159 0 255
-SetBorderColor 1 0 0 255
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+SetBackgroundColor 213 159 0 255
+SetBorderColor 0 0 0 255
 
 Show
 BaseType "Resonator"
 Class "Currency"
-PlayAlertSound 2 300
-SetTextColor 1 0 0 255
-SetFontSize 46
-SetBackgroundColor 214 159 0 255
-SetBorderColor 1 0 0 255
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+SetBackgroundColor 213 159 0 255
+SetBorderColor 0 0 0 255
 
 Show
 HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's" "Emperor's" "Flaring"
-PlayAlertSound 10 300
-SetTextColor 256 255 255 256
+PlayAlertSound 9 300
+SetTextColor 255 255 255 255
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
 SetBorderColor 136 136 255 255
@@ -258,7 +258,7 @@ MinimapIcon 0 Red Star
 SetBorderColor 255 0 0 255
 
 Show
-BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Glassblower's Bauble" "Sextant" "Silver Coin" "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Engineer's Orb" "Ancient Orb" "Orb of Binding" "Stacked Deck" "Bestiary Orb" "Orb of Horizons"
+BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Glassblower's Bauble" "Sextant" "Silver Coin" "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Engineer's Orb" "Ancient Orb" "Orb of Binding" "Stacked Deck" "Bestiary Orb" "Orb of Horizons" "Exalted Shard" "Catalyst"
 Class "Currency"
 PlayAlertSound 1 300
 SetTextColor 0 0 0 255
@@ -623,10 +623,10 @@ Show
 Rarity = Rare
 
 Show
- ItemLevel < 20
+ ItemLevel < 15
 Rarity = Magic
 
 Show
- ItemLevel < 10
+ ItemLevel < 3
 Rarity = Normal
 
