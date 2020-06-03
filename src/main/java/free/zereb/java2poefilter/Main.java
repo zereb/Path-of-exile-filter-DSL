@@ -257,18 +257,19 @@ public class Main {
         Show.block()
                 .poeClass(Currency)
                 .baseType(scarbCurrency)
-                .addPropperty("ItemLevel < 75")
+                .addPropperty("AreaLevel < 75")
                 .setStyle(Styles.currencyAlt).print();
         Show.block()
                 .poeClass(Currency)
                 .baseType(scrolls)
-                .addPropperty("ItemLevel < 75")
+                .addPropperty("AreaLevel  < 75")
                 .setStyle(Styles.currencyAlt).print();
-
         Show.block()
                 .baseType("Essence of")
                 .setStyle(Styles.essense).print();
-
+        Show.block()
+                .baseType(RemnantofCorruption)
+                .setStyle(Styles.essense).print();
 
         //uniques
         Show.block()
@@ -293,14 +294,19 @@ public class Main {
         shaperList.addAll(craftingBases);
 
 
-        Show.block()
-                .addPropperty("ItemLevel > 84")
-                .shaperitem(true)
-                .baseType(shaperList)
-                .setStyle(Styles.currencyExalt).print();
+//        Show.block()
+//                .addPropperty("ItemLevel > 84")
+//                .shaperitem(true)
+//                .baseType(shaperList)
+//                .setStyle(Styles.currencyExalt).print();
+//        Show.block()
+//                .addPropperty("ItemLevel >= 84")
+//                .elderitem(true)
+//                .baseType(shaperList)
+//                .setStyle(Styles.currencyExalt).print();
         Show.block()
                 .addPropperty("ItemLevel >= 84")
-                .elderitem(true)
+                .HasInfuence("")
                 .baseType(shaperList)
                 .setStyle(Styles.currencyExalt).print();
         Show.block()
@@ -400,6 +406,31 @@ public class Main {
                 .setStyle(Styles.manaFlasks).print()
         );
 
+
+
+        var meleeLeveling2h = List.of(TwoHandAxes, TwoHandSwords, TwoHandAxes, Warstaff);
+
+        var meleeLeveling1h = List.of(OneHandAxes, OneHandSwords, Claws, Daggers);
+
+
+        Show.block()
+                .addPropperty("ItemLevel < 16")
+                .poeClass(Rings)
+                .setStyle(Styles.levleling).print();
+        Show.block()
+                .poeClass(meleeLeveling2h)
+                .addPropperty("DropLevel > 5")
+                .addPropperty("ItemLevel < 10")
+                .setStyle(Styles.levleling).print();
+
+        for (int i = 10; i <= 60; i+=5) {
+            Show.block()
+                    .poeClass(meleeLeveling2h)
+                    .addPropperty("DropLevel > " + i)
+                    .addPropperty("ItemLevel < " + (i + 10))
+                    .setStyle(Styles.levleling).print();
+
+        }
 
 //todo influences and melee 2 hand leveling
 

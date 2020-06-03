@@ -9,11 +9,13 @@ import static free.zereb.java2poefilter.Utils.quote;
 
 public abstract class Block {
 
+
+
     public HashMap<String, String> data = new HashMap<>();
     public Style style;
 
     public Block addPropperty(String prop){
-        data.put("", prop);
+        data.put(prop, "");
         return this;
     }
 
@@ -46,7 +48,6 @@ public abstract class Block {
         return this;
     }
 
-
     public Block baseType(List<String> types){
         StringBuilder builder = new StringBuilder();
         types.forEach(type -> builder.append(quote(type)).append(" "));
@@ -77,13 +78,26 @@ public abstract class Block {
         return this;
     }
 
+    @Deprecated
     public Block elderitem(Boolean b){
         data.put("ElderItem", b.toString());
         return this;
     }
 
+    @Deprecated
     public Block shaperitem(Boolean b){
         data.put("ShaperItem", b.toString());
+        return this;
+    }
+
+    public Block HasInfuence(String influener){
+        data.put("HasInfluence ", influener);
+        return this;
+    }
+    public Block HasInfuence(List<String> influeners){
+        StringBuilder builder = new StringBuilder();
+        influeners.forEach(p -> builder.append(quote(p)).append(" "));
+        data.put("HasInfluence ", builder.toString());
         return this;
     }
 

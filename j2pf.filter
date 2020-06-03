@@ -164,7 +164,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
 
 Show
- LinkedSockets = 6
+LinkedSockets = 6 
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
 SetFontSize 45
@@ -174,13 +174,13 @@ MinimapIcon 0 Red Star
 SetBorderColor 255 0 0 255
 
 Show
- Sockets = 6
+Sockets = 6 
 SetFontSize 40
 SetBackgroundColor 128 128 128 255
 SetBorderColor 200 200 200 255
 
 Show
- LinkedSockets = 5
+LinkedSockets = 5 
 SetFontSize 40
 SetBackgroundColor 128 128 128 255
 SetBorderColor 200 200 200 255
@@ -210,7 +210,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 175 96 37 255
 
 Show
- MapTier > 14
+MapTier > 14 
 Class "Maps"
 PlayAlertSound 4 300
 SetTextColor 255 40 0 255
@@ -220,7 +220,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 40 0 255
 
 Show
- MapTier > 10
+MapTier > 10 
 Class "Maps"
 PlayAlertSound 4 300
 SetTextColor 255 40 0 255
@@ -229,8 +229,8 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 0 255
 
 Show
- MapTier > 5
 Class "Maps"
+MapTier > 5 
 PlayAlertSound 4 300
 SetTextColor 255 255 255 255
 SetFontSize 42
@@ -238,7 +238,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 255 255
 
 Show
- MapTier >= 1
+MapTier >= 1 
 Class "Maps"
 PlayAlertSound 4 300
 SetTextColor 255 255 255 255
@@ -273,21 +273,29 @@ SetTextColor 170 158 130 255
 SetFontSize 40
 
 Show
- ItemLevel < 75
 BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
+AreaLevel < 75 
 Class "Currency"
 SetTextColor 170 158 130 255
 SetFontSize 40
 
 Show
- ItemLevel < 75
 BaseType "Scroll"
 Class "Currency"
+AreaLevel  < 75 
 SetTextColor 170 158 130 255
 SetFontSize 40
 
 Show
 BaseType "Essence of"
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 40
+SetBackgroundColor 15 180 200 255
+SetBorderColor 0 0 0 255
+
+Show
+BaseType "Remnant of Corruption"
 PlayAlertSound 1 300
 SetTextColor 0 0 0 255
 SetFontSize 40
@@ -333,9 +341,9 @@ SetBackgroundColor 184 218 242 255
 SetBorderColor 136 136 255 255
 
 Show
- ItemLevel > 84
+HasInfluence  
 BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
-ShaperItem true
+ItemLevel >= 84 
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
 SetFontSize 45
@@ -345,28 +353,18 @@ MinimapIcon 0 Red Star
 SetBorderColor 255 0 0 255
 
 Show
- ItemLevel >= 84
-BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
-ElderItem true
-PlayAlertSound 2 300
-SetTextColor 255 0 0 255
-SetFontSize 45
-PlayEffect Red
-SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Red Star
-SetBorderColor 255 0 0 255
-
-Show
- ItemLevel >= 84
 BaseType "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
+ItemLevel >= 84 
+Rarity < Rare 
 SetTextColor 255 255 255 255
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 215 0 255
 
 Show
- ItemLevel >= 84
 BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring"
+ItemLevel >= 84 
+Rarity < Rare 
 PlayAlertSound 8 300
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
@@ -414,8 +412,8 @@ MinimapIcon 0 Blue Star
 SetBorderColor 30 150 180 255
 
 Show
- Quality > 18
 Class "Gem"
+Quality > 18 
 PlayAlertSound 2 300
 SetTextColor 30 150 180 255
 SetFontSize 45
@@ -425,7 +423,7 @@ MinimapIcon 0 Blue Star
 SetBorderColor 30 150 180 255
 
 Show
- GemLevel > 19
+GemLevel > 19 
 Class "Gem"
 PlayAlertSound 2 300
 SetTextColor 30 150 180 255
@@ -458,175 +456,267 @@ MinimapIcon 0 Green Circle
 SetBorderColor 74 230 56 255
 
 Show
- Identified True
 Rarity = Rare
+Identified True 
 
 Show
- ItemLevel < 19
+ItemLevel < 19 
 BaseType "Greater Life Flask"
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 51
+ItemLevel < 51 
 BaseType "Hallowed Life Flask"
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 4
 BaseType "Small Life Flask"
+ItemLevel < 4 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 68
 BaseType "Divine Life Flask"
+ItemLevel < 68 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 37
 BaseType "Colossal Life Flask"
+ItemLevel < 37 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 8
 BaseType "Medium Life Flask"
+ItemLevel < 8 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 25
 BaseType "Grand Life Flask"
+ItemLevel < 25 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 43
 BaseType "Sacred Life Flask"
+ItemLevel < 43 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 13
 BaseType "Large Life Flask"
+ItemLevel < 13 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 61
+ItemLevel < 61 
 BaseType "Sanctified Life Flask"
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 31
 BaseType "Giant Life Flask"
+ItemLevel < 31 
 SetFontSize 45
-SetBorderColor 0 0 0 255
+SetBorderColor 120 0 0 255
 
 Show
- ItemLevel < 19
+ItemLevel < 19 
 BaseType "Greater Mana Flask"
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 51
+ItemLevel < 51 
 BaseType "Hallowed Life Flask"
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 4
 BaseType "Small Mana Flask"
+ItemLevel < 4 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 68
 BaseType "Divine Mana Flask"
+ItemLevel < 68 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 37
 BaseType "Colossal Mana Flask"
+ItemLevel < 37 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 8
 BaseType "Medium Mana Flask"
+ItemLevel < 8 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 25
 BaseType "Grand Mana Flask"
+ItemLevel < 25 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 43
 BaseType "Sacred Mana Flask"
+ItemLevel < 43 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 13
 BaseType "Large Mana Flask"
+ItemLevel < 13 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 61
+ItemLevel < 61 
 BaseType "Sanctified Mana Flask"
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 31
 BaseType "Giant Mana Flask"
+ItemLevel < 31 
 SetFontSize 45
-SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 120 255
 
 Show
- ItemLevel < 72
+ItemLevel < 16 
+Class "Rings"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 10 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+DropLevel > 5 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 10 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+ItemLevel < 20 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+ItemLevel < 25 
+DropLevel > 15 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 20 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+ItemLevel < 30 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+ItemLevel < 35 
+DropLevel > 25 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 40 
+DropLevel > 30 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 35 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+ItemLevel < 45 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 50 
+DropLevel > 40 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 45 
+ItemLevel < 55 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 60 
+DropLevel > 50 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 55 
+ItemLevel < 65 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 70 
+DropLevel > 60 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 72 
 Class "Utility Flasks"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 128 128 128 255
 
 Show
- ItemLevel < 35
 BaseType "Rustic Sash" "Sharktooth Arrow Quiver"
+ItemLevel < 35 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
- ItemLevel < 68
 Rarity = Rare
+ItemLevel < 68 
 
 Show
- ItemLevel < 15
 Rarity = Magic
+ItemLevel < 15 
 
 Show
- ItemLevel < 3
 Rarity = Normal
+ItemLevel < 3 
 
