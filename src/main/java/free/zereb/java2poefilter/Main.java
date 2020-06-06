@@ -19,7 +19,7 @@ import static free.zereb.java2poefilter.blocktypes.ItemMods.*;
 public class Main {
 
     private Main() throws URISyntaxException, IOException {
-//        System.out.println(Utils.genBaseTypes(BaseTypes.url));
+        System.out.println(Utils.genBaseTypes("https://pastebin.com/raw/PvWiZcgp"));
         PrintStream fileOut = new PrintStream("./j2pf.filter");
         System.setOut(fileOut);
 
@@ -83,7 +83,7 @@ public class Main {
                 TheEnlightened, TheMayor, TheProfessor, TheValkyrie, TheVoid, TheWind, TheWolf
         );
 
-        var topIncubators = List.of(TimeLostIncubator, EldritchIncubator, ForebodingIncubator, GeomancersIncubator, ThaumaturgesIncubator);
+        var topIncubators = List.of(TimeLostIncubator, ForebodingIncubator, GeomancersIncubator, ThaumaturgesIncubator);
 
 
         var goodBodyArmors = List.of(AstralPlate, GloriousPlate, GladiatorPlate, AssassinBow, VaalRegalia, SacrificialGarb);
@@ -196,8 +196,7 @@ public class Main {
                         .setFontSize(45)
                 ).print();
         Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(Prophecy)
+                .poeClass(ItemClasses)
                 .setStyle(Styles.prophecy).print();
         Show.block()
                 .poeClass(Piece)
@@ -306,7 +305,7 @@ public class Main {
 //                .setStyle(Styles.currencyExalt).print();
         Show.block()
                 .addPropperty("ItemLevel >= 84")
-                .HasInfuence("")
+                .HasInfuence(Influence.all)
                 .baseType(shaperList)
                 .setStyle(Styles.currencyExalt).print();
         Show.block()
@@ -408,7 +407,7 @@ public class Main {
 
 
 
-        var meleeLeveling2h = List.of(TwoHandAxes, TwoHandSwords, TwoHandAxes, Warstaff);
+        var meleeLeveling2h = List.of(TwoHandAxes, TwoHandSwords, TwoHandAxes, Warstaves);
 
         var meleeLeveling1h = List.of(OneHandAxes, OneHandSwords, Claws, Daggers);
 

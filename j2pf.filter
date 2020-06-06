@@ -341,7 +341,7 @@ SetBackgroundColor 184 218 242 255
 SetBorderColor 136 136 255 255
 
 Show
-HasInfluence  
+HasInfluence  "Elder" "Shaper" "Warlord" "Hunter" "Crusader" "Redeemer" 
 BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
 ItemLevel >= 84 
 PlayAlertSound 2 300
@@ -600,7 +600,7 @@ SetBorderColor 255 255 0 255
 
 Show
 ItemLevel < 10 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 DropLevel > 5 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
@@ -608,14 +608,14 @@ SetBorderColor 255 255 0 255
 
 Show
 DropLevel > 10 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 ItemLevel < 20 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 ItemLevel < 25 
 DropLevel > 15 
 SetFontSize 40
@@ -624,14 +624,14 @@ SetBorderColor 255 255 0 255
 
 Show
 DropLevel > 20 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 ItemLevel < 30 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 ItemLevel < 35 
 DropLevel > 25 
 SetFontSize 40
@@ -641,14 +641,14 @@ SetBorderColor 255 255 0 255
 Show
 ItemLevel < 40 
 DropLevel > 30 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
 DropLevel > 35 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 ItemLevel < 45 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
@@ -657,7 +657,7 @@ SetBorderColor 255 255 0 255
 Show
 ItemLevel < 50 
 DropLevel > 40 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -665,7 +665,7 @@ SetBorderColor 255 255 0 255
 Show
 DropLevel > 45 
 ItemLevel < 55 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -673,7 +673,7 @@ SetBorderColor 255 255 0 255
 Show
 ItemLevel < 60 
 DropLevel > 50 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -681,7 +681,7 @@ SetBorderColor 255 255 0 255
 Show
 DropLevel > 55 
 ItemLevel < 65 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -689,7 +689,7 @@ SetBorderColor 255 255 0 255
 Show
 ItemLevel < 70 
 DropLevel > 60 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaff"
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255

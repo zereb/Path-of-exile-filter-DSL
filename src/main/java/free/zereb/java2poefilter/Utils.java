@@ -15,8 +15,8 @@ public class Utils {
         return "\""+s+"\"";
     }
 
-
     public static String genBaseTypes(String url){
+
         HttpClient httpClient = HttpClient.newBuilder().build();
         HttpRequest httpRequest = HttpRequest.newBuilder(URI.create(url)).build();
         StringBuilder result = new StringBuilder();

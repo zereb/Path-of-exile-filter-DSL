@@ -7,7 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ItemClasses {
-    public static final String url = "https://raw.githubusercontent.com/ben-wallis/Filtration/master/Filtration/Resources/ItemClasses.txt";
+    public static final String url = "https://pastebin.com/raw/KnZqvken";
 
 
     public static final String AbyssJewel ="Abyss Jewel";
@@ -67,8 +67,8 @@ public class ItemClasses {
     public static final String TwoHandSwords ="Two Hand Swords";
     public static final String UtilityFlasks ="Utility Flasks";
     public static final String Wands ="Wands";
-    public static final String Warstaff ="Warstaff";
-    public static final String RuneDagger ="Rune Dagger";
+    public static final String Warstaves ="Warstaves";
+    public static final String RuneDaggers ="Rune Daggers";
     public static final String AtlasRegionUpgradeItem ="Atlas Region Upgrade Item";
 
 
