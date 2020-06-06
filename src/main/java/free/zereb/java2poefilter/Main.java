@@ -19,7 +19,7 @@ import static free.zereb.java2poefilter.blocktypes.ItemMods.*;
 public class Main {
 
     private Main() throws URISyntaxException, IOException {
-        System.out.println(Utils.genBaseTypes("https://pastebin.com/raw/PvWiZcgp"));
+//        System.out.println(Utils.genBaseTypes("https://pastebin.com/raw/PvWiZcgp"));
         PrintStream fileOut = new PrintStream("./j2pf.filter");
         System.setOut(fileOut);
 
@@ -50,7 +50,7 @@ public class Main {
         );
 
         var topCurrency = List.of(
-                MirrorofKalandra, EternalOrb, DivineOrb, ExaltedOrb, AlbinoRhoaFeather, HarbingersOrb, OrbofAnnulment, MirrorShard
+                MirrorofKalandra, EternalOrb, DivineOrb, ExaltedOrb, AlbinoRhoaFeather, HarbingersOrb, OrbofAnnulment, MirrorShard, AwakenersOrb
         );
 
         var Oils = List.of(
@@ -107,6 +107,7 @@ public class Main {
         );
 
         var atlasBases = List.of(
+                VermillionRing, CeruleanRing, ConvokingWand,
                 OpalRing, CrystalBelt, SpikedGloves, GrippedGloves, FingerlessSilkGloves, VanguardBelt, BoneHelmet,
                 BluePearlAmulet, MarbleAmulet, SteelRing, ConvokingWand, VermillionRing, CeruleanRing
         );
@@ -116,18 +117,27 @@ public class Main {
         //delirium
         Show.block()
                 .poeClass(StackableCurrency)
-                .baseType("Delirium Orb")
+                .baseType(DeliriumOrb)
                 .setStyle(Styles.currecyChaos).print();
 
         Show.block()
                 .poeClass(MapFragments)
-                .baseType("Simulacrum")
+                .baseType(Simulacrum)
+                .setStyle(Styles.splinters).print();
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType(SimulacrumSplinter)
                 .setStyle(Styles.splinters).print();
 
         Show.block()
                 .poeClass(Jewel)
                 .baseType("Cluster")
                 .setStyle(Styles.gem).print();
+        //Metamorph
+        Show.block()
+                .poeClass(Gems)
+                .baseType("Avakened")
+                .setStyle(Styles.gemExalt).print();
 
         //Blight
         Show.block()
@@ -196,7 +206,8 @@ public class Main {
                         .setFontSize(45)
                 ).print();
         Show.block()
-                .poeClass(ItemClasses)
+                .poeClass(StackableCurrency)
+                .baseType("Prophecy")
                 .setStyle(Styles.prophecy).print();
         Show.block()
                 .poeClass(Piece)
