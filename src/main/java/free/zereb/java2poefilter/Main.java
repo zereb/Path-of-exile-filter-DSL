@@ -20,6 +20,7 @@ public class Main {
 
     private Main() throws URISyntaxException, IOException {
 //        System.out.println(Utils.genBaseTypes("https://pastebin.com/raw/PvWiZcgp"));
+//        System.out.println(Utils.genBaseTypes(BaseTypes.url));
         PrintStream fileOut = new PrintStream("./j2pf.filter");
         System.setOut(fileOut);
 
@@ -54,7 +55,7 @@ public class Main {
         );
 
         var Oils = List.of(
-                AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil
+                AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil, IndigoOil
         );
 
         var goodCurrency = List.of(
@@ -65,13 +66,12 @@ public class Main {
         );
 
         var mehCurrency = List.of(
-                OrbofChance, OrbofAlteration, ChromaticOrb, JewellersOrb,
+                OrbofChance, OrbofAlteration, ChromaticOrb, JewellersOrb, OrbofTransmutation,
                 AnnulmentShard, BindingShard, HorizonShard, EngineersShard, AncientShard, ChaosShard, RegalShard, HarbingersShard
         );
 
-        var scarbCurrency = List.of(ArmourersScrap, BlacksmithsWhetstone, OrbofAugmentation, OrbofTransmutation);
+        var scarbCurrency = List.of(ArmourersScrap, BlacksmithsWhetstone, OrbofAugmentation);
 
-        var scrolls = List.of("Scroll");
 
         var topUniqs = List.of(SapphireFlask, StibniteFlask, GraniteFlask, GloriousPlate, SadistGarb, FullDragonscale, OccultistsVestment);
 
@@ -88,14 +88,20 @@ public class Main {
 
         var goodBodyArmors = List.of(AstralPlate, GloriousPlate, GladiatorPlate, AssassinBow, VaalRegalia, SacrificialGarb);
         var goodWeapons = List.of(
-                BehemothMace, CoronalMaul, SiegeAxe, VaalAxe, Fleshripper, VaalBlade, EternalSword, JewelledFoil, VaalRapier,
-                ExquisiteBlade, GeminiClaw, ImperialClaw, Ambusher, Sai, ImperialStaff, ImbuedWand);
+                BehemothMace, SiegeAxe, VaalBlade, EternalSword, JewelledFoil, VaalRapier,
+                GeminiClaw, ImperialClaw, Ambusher, Sai, ImbuedWand);
+        var goodTwoHanders = List.of(ImperialStaff, EclipseStaff, Lathi,
+                SunderingAxe, EzomyteAxe, VaalAxe, DespotAxe, DespotAxe, VoidAxe, Fleshripper,
+                KaruiMaul, ColossusMallet, Piledriver, Meatgrinder, ImperialMaul, TerrorMaul, CoronalMaul,
+                HeadmansSword, ReaverSword, EzomyteBlade, VaalGreatsword, LionSword, InfernalSword, ExquisiteBlade,
+                EzomyteStaff, MaelströmStaff, JudgementStaff);
         var goodArmor = List.of(FingerlessSilkGloves, TwoTonedBoots, TitanGreaves, SpikedGloves, GrippedGloves, RoyalBurgonet, HubrisCirclet);
         var goodshields = List.of(PinnacleTowerShield, ColossalTowerShield, EzomyteTowerShield, TitaniumSpiritShield);
 
 
         var goodRares = new LinkedList<>(goodBodyArmors);
         goodRares.addAll(goodWeapons);
+        goodRares.addAll(goodTwoHanders);
         goodRares.addAll(goodArmor);
         goodRares.addAll(goodshields);
 
@@ -103,7 +109,10 @@ public class Main {
 
         var craftingBases = List.of(
                 AstralPlate, VaalRegalia, TitanGauntlets, HubrisCirclet, TwoStoneRing, DiamondRing,
-                SiegeAxe, VaalAxe, JewelledFoil, VaalRapier, Fleshripper, GeminiClaw, CoronalMaul, Sai, Ambusher, ImperialStaff, ExquisiteBlade
+                SiegeAxe, JewelledFoil, VaalRapier, GeminiClaw, Sai, Ambusher,
+                MaelströmStaff, ExquisiteBlade, InfernalSword, LionSword, VaalGreatsword, EzomyteBlade, ReaverSword,
+                CoronalMaul, ImperialMaul, Meatgrinder,
+                Fleshripper, VoidAxe, DespotAxe, VaalAxe, SunderingAxe, EzomyteAxe
         );
 
         var atlasBases = List.of(
@@ -113,8 +122,21 @@ public class Main {
         );
 
 
+        //Harvest
+        var harvestCurrency = List.of(
+                InfusedEngineersOrb, TimelightScroll, FragmentationScroll, DeregulationScroll, ElectroshockScroll, HaemocombustionScroll,
+                SpecularityScroll, FacetorsLens
+        );
 
-        //delirium
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType(harvestCurrency)
+                .setStyle(Styles.currecyChaos).print();
+        Show.block()
+                .poeClass(HarvestSeed)
+                .setStyle(Styles.splinters).print();
+
+        //Delirium
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType(DeliriumOrb)
@@ -136,7 +158,7 @@ public class Main {
         //Metamorph
         Show.block()
                 .poeClass(Gems)
-                .baseType("Avakened")
+                .baseType("Awakened")
                 .setStyle(Styles.gemExalt).print();
 
         //Blight
@@ -267,12 +289,7 @@ public class Main {
         Show.block()
                 .poeClass(Currency)
                 .baseType(scarbCurrency)
-                .addPropperty("AreaLevel < 75")
-                .setStyle(Styles.currencyAlt).print();
-        Show.block()
-                .poeClass(Currency)
-                .baseType(scrolls)
-                .addPropperty("AreaLevel  < 75")
+                .addPropperty("AreaLevel < 68")
                 .setStyle(Styles.currencyAlt).print();
         Show.block()
                 .baseType("Essence of")
@@ -432,8 +449,15 @@ public class Main {
                 .addPropperty("DropLevel > 5")
                 .addPropperty("ItemLevel < 10")
                 .setStyle(Styles.levleling).print();
+        Show.block()
+                .poeClass(meleeLeveling1h)
+                .addPropperty("DropLevel > 5")
+                .addPropperty("ItemLevel < 10")
+                .setStyle(Styles.levleling).print();
 
-        for (int i = 10; i <= 60; i+=5) {
+
+
+        for (int i = 10; i <= 60; i += 10) {
             Show.block()
                     .poeClass(meleeLeveling2h)
                     .addPropperty("DropLevel > " + i)
@@ -442,26 +466,48 @@ public class Main {
 
         }
 
-//todo influences and melee 2 hand leveling
-
         Show.block()
-                .addPropperty("ItemLevel < 72")
+                .addPropperty("ItemLevel < 68")
                 .poeClass(UtilityFlasks)
                 .setStyle(Styles.levlelingFasks).print();
         Show.block()
                 .addPropperty("ItemLevel < 35")
                 .baseType(List.of(RusticSash, SharktoothArrowQuiver))
                 .setStyle(Styles.levleling).print();
+        Show.block()
+                .addPropperty("DropLevel < 25")
+                .rarity(Rarity.Magic)
+                .baseType(Boots)
+                .setStyle(Styles.levleling).print();
 
         Show.block()
                 .addPropperty("ItemLevel < 68")
                 .rarity(Rarity.Rare).print();
+        Show.block()
+                .addPropperty("ItemLevel < 25")
+                .rarity(Rarity.Magic)
+                .poeClass(List.of(Rings, Amulets, Belts));
         Show.block()
                 .addPropperty("ItemLevel < 15")
                 .rarity(Rarity.Magic).print();
         Show.block()
                 .addPropperty("ItemLevel < 3")
                 .rarity(Rarity.Normal).print();
+
+
+        Hide.block()
+                .rarity(Rarity.Normal).print();
+        Hide.block()
+                .rarity(Rarity.Magic).print();
+        Hide.block()
+                .rarity(Rarity.Rare).print();
+        Hide.block()
+                .poeClass(Gems).print();
+        Hide.block()
+                .poeClass(Currency)
+                .baseType(List.of(ScrollofWisdom, PortalScroll, ArmourersScrap, BlacksmithsWhetstone)).print();
+
+
     }
 
 

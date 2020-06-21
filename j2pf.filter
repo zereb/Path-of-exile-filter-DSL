@@ -1,4 +1,20 @@
 Show
+BaseType "Infused Engineer's Orb" "Time-light Scroll" "Fragmentation Scroll" "Deregulation Scroll" "Electroshock Scroll" "Haemocombustion Scroll" "Specularity Scroll" "Facetor's Lens"
+Class "Stackable Currency"
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+SetBackgroundColor 213 159 0 255
+SetBorderColor 0 0 0 255
+
+Show
+Class "Harvest Seed"
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 231 180 120 255
+
+Show
 BaseType "Delirium Orb"
 Class "Stackable Currency"
 PlayAlertSound 1 300
@@ -16,13 +32,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
 
 Show
-BaseType "Cluster"
-Class "Jewel"
-SetFontSize 45
-SetBorderColor 30 150 180 255
-
-Show
-BaseType "Amber Oil" "Azure Oil" "Black Oil" "Clear Oil" "Crimson Oil" "Golden Oil" "Opalescent Oil" "Sepia Oil" "Silver Oil" "Teal Oil" "Verdant Oil" "Violet Oil"
+BaseType "Simulacrum Splinter"
 Class "Stackable Currency"
 SetTextColor 231 180 120 255
 SetFontSize 45
@@ -30,7 +40,32 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
 
 Show
-BaseType "Time-Lost Incubator" "Eldritch Incubator" "Foreboding Incubator" "Geomancer's Incubator" "Thaumaturge's Incubator"
+BaseType "Cluster"
+Class "Jewel"
+SetFontSize 45
+SetBorderColor 30 150 180 255
+
+Show
+BaseType "Awakened"
+Class "Gems"
+PlayAlertSound 2 300
+SetTextColor 30 150 180 255
+SetFontSize 45
+PlayEffect Blue
+SetBackgroundColor 255 255 255 255
+MinimapIcon 0 Blue Star
+SetBorderColor 30 150 180 255
+
+Show
+BaseType "Amber Oil" "Azure Oil" "Black Oil" "Clear Oil" "Crimson Oil" "Golden Oil" "Opalescent Oil" "Sepia Oil" "Silver Oil" "Teal Oil" "Verdant Oil" "Violet Oil" "Indigo Oil"
+Class "Stackable Currency"
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 231 180 120 255
+
+Show
+BaseType "Time-Lost Incubator" "Foreboding Incubator" "Geomancer's Incubator" "Thaumaturge's Incubator"
 Class "Incubator"
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
@@ -247,7 +282,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 0 255
 
 Show
-BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Harbinger's Orb" "Orb of Annulment" "Mirror Shard"
+BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Harbinger's Orb" "Orb of Annulment" "Mirror Shard" "Awakener's Orb"
 Class "Currency"
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
@@ -267,22 +302,15 @@ SetBackgroundColor 213 159 0 255
 SetBorderColor 0 0 0 255
 
 Show
-BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Annulment Shard" "Binding Shard" "Horizon Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Regal Shard" "Harbinger's Shard"
+BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Orb of Transmutation" "Annulment Shard" "Binding Shard" "Horizon Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Regal Shard" "Harbinger's Shard"
 Class "Currency"
 SetTextColor 170 158 130 255
 SetFontSize 40
 
 Show
-BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
-AreaLevel < 75 
+AreaLevel < 68 
+BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation"
 Class "Currency"
-SetTextColor 170 158 130 255
-SetFontSize 40
-
-Show
-BaseType "Scroll"
-Class "Currency"
-AreaLevel  < 75 
 SetTextColor 170 158 130 255
 SetFontSize 40
 
@@ -342,7 +370,7 @@ SetBorderColor 136 136 255 255
 
 Show
 HasInfluence  "Elder" "Shaper" "Warlord" "Hunter" "Crusader" "Redeemer" 
-BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
+BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe"
 ItemLevel >= 84 
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
@@ -353,7 +381,7 @@ MinimapIcon 0 Red Star
 SetBorderColor 255 0 0 255
 
 Show
-BaseType "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Vaal Axe" "Jewelled Foil" "Vaal Rapier" "Fleshripper" "Gemini Claw" "Coronal Maul" "Sai" "Ambusher" "Imperial Staff" "Exquisite Blade"
+BaseType "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe"
 ItemLevel >= 84 
 Rarity < Rare 
 SetTextColor 255 255 255 255
@@ -362,7 +390,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 215 0 255
 
 Show
-BaseType "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring"
+BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring"
 ItemLevel >= 84 
 Rarity < Rare 
 PlayAlertSound 8 300
@@ -393,7 +421,7 @@ SetFontSize 45
 SetBorderColor 255 200 0 255
 
 Show
-BaseType "Astral Plate" "Glorious Plate" "Gladiator Plate" "Assassin Bow" "Vaal Regalia" "Sacrificial Garb" "Behemoth Mace" "Coronal Maul" "Siege Axe" "Vaal Axe" "Fleshripper" "Vaal Blade" "Eternal Sword" "Jewelled Foil" "Vaal Rapier" "Exquisite Blade" "Gemini Claw" "Imperial Claw" "Ambusher" "Sai" "Imperial Staff" "Imbued Wand" "Fingerless Silk Gloves" "Two-Toned Boots" "Titan Greaves" "Spiked Gloves" "Gripped Gloves" "Royal Burgonet" "Hubris Circlet" "Pinnacle Tower Shield" "Colossal Tower Shield" "Ezomyte Tower Shield" "Titanium Spirit Shield"
+BaseType "Astral Plate" "Glorious Plate" "Gladiator Plate" "Assassin Bow" "Vaal Regalia" "Sacrificial Garb" "Behemoth Mace" "Siege Axe" "Vaal Blade" "Eternal Sword" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Imperial Claw" "Ambusher" "Sai" "Imbued Wand" "Imperial Staff" "Eclipse Staff" "Lathi" "Sundering Axe" "Ezomyte Axe" "Vaal Axe" "Despot Axe" "Despot Axe" "Void Axe" "Fleshripper" "Karui Maul" "Colossus Mallet" "Piledriver" "Meatgrinder" "Imperial Maul" "Terror Maul" "Coronal Maul" "Headman's Sword" "Reaver Sword" "Ezomyte Blade" "Vaal Greatsword" "Lion Sword" "Infernal Sword" "Exquisite Blade" "Ezomyte Staff" "Maelström Staff" "Judgement Staff" "Fingerless Silk Gloves" "Two-Toned Boots" "Titan Greaves" "Spiked Gloves" "Gripped Gloves" "Royal Burgonet" "Hubris Circlet" "Pinnacle Tower Shield" "Colossal Tower Shield" "Ezomyte Tower Shield" "Titanium Spirit Shield"
 Rarity = Rare
 SetTextColor 255 215 0 255
 SetFontSize 45
@@ -607,17 +635,17 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-DropLevel > 10 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-ItemLevel < 20 
+ItemLevel < 10 
+Class "One Hand Axes" "One Hand Swords" "Claws" "Daggers"
+DropLevel > 5 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
+DropLevel > 10 
 Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-ItemLevel < 25 
-DropLevel > 15 
+ItemLevel < 20 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -631,14 +659,6 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-ItemLevel < 35 
-DropLevel > 25 
-SetFontSize 40
-SetBackgroundColor 0 0 0 255
-SetBorderColor 255 255 0 255
-
-Show
 ItemLevel < 40 
 DropLevel > 30 
 Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
@@ -647,24 +667,8 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-DropLevel > 35 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-ItemLevel < 45 
-SetFontSize 40
-SetBackgroundColor 0 0 0 255
-SetBorderColor 255 255 0 255
-
-Show
 ItemLevel < 50 
 DropLevel > 40 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-SetFontSize 40
-SetBackgroundColor 0 0 0 255
-SetBorderColor 255 255 0 255
-
-Show
-DropLevel > 45 
-ItemLevel < 55 
 Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
@@ -679,14 +683,6 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-DropLevel > 55 
-ItemLevel < 65 
-Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
-SetFontSize 40
-SetBackgroundColor 0 0 0 255
-SetBorderColor 255 255 0 255
-
-Show
 ItemLevel < 70 
 DropLevel > 60 
 Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
@@ -695,8 +691,8 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
-ItemLevel < 72 
 Class "Utility Flasks"
+ItemLevel < 68 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 128 128 128 255
@@ -704,6 +700,14 @@ SetBorderColor 128 128 128 255
 Show
 BaseType "Rustic Sash" "Sharktooth Arrow Quiver"
 ItemLevel < 35 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+BaseType "Boots"
+Rarity = Magic
+DropLevel < 25 
 SetFontSize 40
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
@@ -719,4 +723,20 @@ ItemLevel < 15
 Show
 Rarity = Normal
 ItemLevel < 3 
+
+Hide
+Rarity = Normal
+
+Hide
+Rarity = Magic
+
+Hide
+Rarity = Rare
+
+Hide
+Class "Gem"
+
+Hide
+BaseType "Scroll of Wisdom" "Portal Scroll" "Armourer's Scrap" "Blacksmith's Whetstone"
+Class "Currency"
 

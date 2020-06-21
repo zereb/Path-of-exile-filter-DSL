@@ -70,6 +70,9 @@ public class ItemClasses {
     public static final String Warstaves ="Warstaves";
     public static final String RuneDaggers ="Rune Daggers";
     public static final String AtlasRegionUpgradeItem ="Atlas Region Upgrade Item";
+    public static final String HarvestInfrastructure  ="HarvestInfrastructure";
+    public static final String HarvestSeed = "Harvest Seed";
+
 
 
 }

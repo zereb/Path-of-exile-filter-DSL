@@ -3,7 +3,8 @@ package free.zereb.java2poefilter.blocktypes;
 import java.net.http.HttpClient;
 
 public class BaseTypes {
-    public static final String url = "https://pastebin.com/raw/PvWiZcgp/";
+    public static final String url = "https://pastebin.com/raw/Bg4f7JUX";
+
     public static String AlbinoRhoaFeather = "Albino Rhoa Feather";
     public static String MirrorofKalandra = "Mirror of Kalandra";
     public static String ExaltedOrb = "Exalted Orb";
@@ -2419,4 +2420,57 @@ public class BaseTypes {
     public static String GoldenMantle = "Golden Mantle";
     public static String GoldenVisage = "Golden Visage";
     public static String GoldenFlame = "Golden Flame";
+    public static String InfusedEngineersOrb = "Infused Engineer's Orb";
+    public static String TimelightScroll = "Time-light Scroll";
+    public static String FragmentationScroll = "Fragmentation Scroll";
+    public static String DeregulationScroll = "Deregulation Scroll";
+    public static String ElectroshockScroll = "Electroshock Scroll";
+    public static String HaemocombustionScroll = "Haemocombustion Scroll";
+    public static String SpecularityScroll = "Specularity Scroll";
+    public static String FacetorsLens = "Facetor's Lens";
+    public static String IndigoOil = "Indigo Oil";
+    public static String TributetotheGoddess = "Tribute to the Goddess";
+    public static String GifttotheGoddess = "Gift to the Goddess";
+    public static String DedicationtotheGoddess = "Dedication to the Goddess";
+    public static String WingedCartographyScarab = "Winged Cartography Scarab";
+    public static String WingedReliquaryScarab = "Winged Reliquary Scarab";
+    public static String WingedBestiaryScarab = "Winged Bestiary Scarab";
+    public static String WingedShaperScarab = "Winged Shaper Scarab";
+    public static String WingedElderScarab = "Winged Elder Scarab";
+    public static String WingedSulphiteScarab = "Winged Sulphite Scarab";
+    public static String WingedDivinationScarab = "Winged Divination Scarab";
+    public static String WingedTormentScarab = "Winged Torment Scarab";
+    public static String WingedAmbushScarab = "Winged Ambush Scarab";
+    public static String WingedHarbingerScarab = "Winged Harbinger Scarab";
+    public static String WingedPerandusScarab = "Winged Perandus Scarab";
+    public static String WingedBreachScarab = "Winged Breach Scarab";
+    public static String WingedLegionScarab = "Winged Legion Scarab";
+    public static String WingedMetamorphScarab = "Winged Metamorph Scarab";
+    public static String CreepingFrost = "Creeping Frost";
+    public static String InfernalCry = "Infernal Cry";
+    public static String GeneralsCry = "General's Cry";
+    public static String IntimidatingCry = "Intimidating Cry";
+    public static String AncestralCry = "Ancestral Cry";
+    public static String PenanceBrand = "Penance Brand";
+    public static String WintertideBrand = "Wintertide Brand";
+    public static String ArcanistBrand = "Arcanist Brand";
+    public static String Earthshatter = "Earthshatter";
+    public static String FistofWarSupport = "Fist of War Support";
+    public static String UrgentOrdersSupport = "Urgent Orders Support";
+    public static String SwiftbrandSupport = "Swiftbrand Support";
+    public static String TheTumbleweed = "The Tumbleweed";
+    public static String TheHiveofKnowledge = "The Hive of Knowledge";
+    public static String GiftofAsenath = "Gift of Asenath";
+    public static String ANoteintheWind = "A Note in the Wind";
+    public static String TheGreatestIntentions = "The Greatest Intentions";
+    public static String TheWhiteKnight = "The White Knight";
+    public static String PrometheusArmoury = "Prometheus' Armoury";
+    public static String TheSustenance = "The Sustenance";
+    public static String PeacefulMoments = "Peaceful Moments";
+    public static String TheAwakened = "The Awakened";
+    public static String AFamiliarCall = "A Familiar Call";
+    public static String TheLongCon = "The Long Con";
+
+
+
 }
