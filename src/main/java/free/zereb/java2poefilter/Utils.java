@@ -15,24 +15,30 @@ public class Utils {
         return "\""+s+"\"";
     }
 
-    public static String genBaseTypes(String url){
+
+
+    public static String genBaseTypesFromUrl(String url){
 
         HttpClient httpClient = HttpClient.newBuilder().build();
         HttpRequest httpRequest = HttpRequest.newBuilder(URI.create(url)).build();
-        StringBuilder result = new StringBuilder();
         try {
             HttpResponse<String> response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
             String baseTypes = response.body();
-
-            baseTypes.lines().forEach(line -> {
-                result.append("public static String ").append(line.replaceAll("[ '|,|\\-|)|(]", "")).append(" = \"").append(line).append("\";\n");
-            });
+            return genBaseTypes(baseTypes);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
+        return "";
+   }
 
+    public static String genBaseTypes(String baseTypes){
+        StringBuilder result = new StringBuilder();
+            baseTypes.lines().forEach(line -> {
+                result.append("public static String ").append(line.replaceAll("[ '|,|\\-|)|(]", "")).append(" = \"").append(line).append("\";\n");
+            });
 
         return result.toString();
-    }
 
+
+    }
 }

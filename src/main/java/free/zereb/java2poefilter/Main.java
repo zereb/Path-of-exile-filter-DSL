@@ -19,8 +19,8 @@ import static free.zereb.java2poefilter.blocktypes.ItemMods.*;
 public class Main {
 
     private Main() throws URISyntaxException, IOException {
-//        System.out.println(Utils.genBaseTypes("https://pastebin.com/raw/PvWiZcgp"));
-//        System.out.println(Utils.genBaseTypes(BaseTypes.url));
+
+
         PrintStream fileOut = new PrintStream("./j2pf.filter");
         System.setOut(fileOut);
 
@@ -121,6 +121,58 @@ public class Main {
                 BluePearlAmulet, MarbleAmulet, SteelRing, ConvokingWand, VermillionRing, CeruleanRing
         );
 
+        var ritualBases = List.of(DreamquestSlippers, CloudwhisperBoots, BrimstoneTreads, NightwindSlippers, WindbreakBoots, DarksteelTreads, DuskwalkSlippers, StormriderBoots, BasemetalTreads,
+                DebilitationGauntlets, GruellingGauntlets, TaxingGauntlets, SinistralGloves, SouthswingGloves, GaucheGloves, NexusGloves, AetherwindGloves, LeylineGloves,
+                BlizzardCrown, WinterCrown, GaleCrown, ArchdemonCrown, DemonCrown, ImpCrown, AtonementMask, PenitentMask, SorrowMask
+        );
+
+
+        //ritual
+        Show.block()
+                .baseType(ritualBases)
+                .setStyle(Styles.atlasBases)
+                .print();
+
+        var ritualCurrency = List.of(OrbofUnmaking, MavensOrb, RitualSplinter, RitualVessel, CrescentSplinter);
+        Show.block()
+                .poeClass(StackableCurrency)
+                .baseType(ritualCurrency)
+                .setStyle(Styles.currecyChaos)
+                .print();
+
+        Show.block()
+                .baseType(Watchstone)
+                .setStyle(Styles.questItems)
+                .print();
+
+        Show.block()
+                .baseType(MavensInvitation)
+                .setStyle(Styles.questItems)
+                .print();
+
+        var ritualFragments = List.of(TheMavensWrit, BloodfilledVessel);
+        Show.block()
+                .baseType(ritualFragments)
+                .setStyle(Styles.mapFragmentRare)
+                .print();
+
+
+
+        //Heist
+        Show.block()
+                .poeClass(Gems)
+                .addPropperty("AlternateQuality True")
+                .setStyle(Styles.gem).print();
+        Show.block()
+                .rarity(Rarity.Unique)
+                .addPropperty("Replica True")
+                .setStyle(Styles.uniqueAlternate)
+                .print();
+        Show.block()
+                .poeClass(List.of(Trinket, HeistTarget, Contract, Blueprint))
+                .setStyle(Styles.questItems).print();
+        Show.block()
+                .poeClass(List.of(HeistCloak, HeistBrooch, HeistGear, HeistTool));
 
         //Harvest
         var harvestCurrency = List.of(
@@ -132,9 +184,6 @@ public class Main {
                 .poeClass(StackableCurrency)
                 .baseType(harvestCurrency)
                 .setStyle(Styles.currecyChaos).print();
-        Show.block()
-                .poeClass(HarvestSeed)
-                .setStyle(Styles.splinters).print();
 
         //Delirium
         Show.block()
@@ -319,18 +368,12 @@ public class Main {
 
         var shaperList = new LinkedList<>(atlasBases);
         shaperList.addAll(craftingBases);
-
-
-//        Show.block()
-//                .addPropperty("ItemLevel > 84")
-//                .shaperitem(true)
-//                .baseType(shaperList)
-//                .setStyle(Styles.currencyExalt).print();
-//        Show.block()
-//                .addPropperty("ItemLevel >= 84")
-//                .elderitem(true)
-//                .baseType(shaperList)
-//                .setStyle(Styles.currencyExalt).print();
+        shaperList.addAll(ritualBases);
+        Show.block()
+                .addPropperty("Rarity < Rare")
+                .addPropperty("ItemLevel >= 84")
+                .baseType(atlasBases)
+                .setStyle(Styles.atlasBases).print();
         Show.block()
                 .addPropperty("ItemLevel >= 84")
                 .HasInfuence(Influence.all)
@@ -342,8 +385,6 @@ public class Main {
                 .baseType(craftingBases)
                 .setStyle(Styles.whiteBases).print();
         Show.block()
-                .addPropperty("Rarity < Rare")
-                .addPropperty("ItemLevel >= 84")
                 .baseType(atlasBases)
                 .setStyle(Styles.atlasBases).print();
 
@@ -502,9 +543,11 @@ public class Main {
         Hide.block()
                 .rarity(Rarity.Rare).print();
         Hide.block()
-                .poeClass(Gems).print();
+                .poeClass(SupportSkillGems).print();
         Hide.block()
-                .poeClass(Currency)
+                .poeClass(ActiveSkillGems).print();
+        Hide.block()
+                .poeClass(StackableCurrency)
                 .baseType(List.of(ScrollofWisdom, PortalScroll, ArmourersScrap, BlacksmithsWhetstone)).print();
 
 

@@ -62,6 +62,13 @@ public static Style essense = new Style()
         .setFontSize(40)
         .playAlertSound(chaosSound);
 
+public static Style uniqueAlternate = new Style()
+            .setBorderColor(new Color(103, 68, 167))
+            .setTextColor(new Color(175, 96, 37))
+            .setBackgroundColor(Color.black)
+            .setFontSize(45)
+            .playAlertSound(uniqueSound);
+
 public static Style uniqueExalt = new Style()
         .setTextColor(new Color(180, 96, 0))
         .setBackgroundColor(Color.white)

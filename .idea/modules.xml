@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/free.zereb.java2poefilter.j2pf.main.iml" filepath="$PROJECT_DIR$/.idea/modules/free.zereb.java2poefilter.j2pf.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/free.zereb.java2poefilter.j2pf.test.iml" filepath="$PROJECT_DIR$/.idea/modules/free.zereb.java2poefilter.j2pf.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/j2pf.iml" filepath="$PROJECT_DIR$/.idea/j2pf.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/j2pf.main.iml" filepath="$PROJECT_DIR$/.idea/modules/j2pf.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/j2pf.test.iml" filepath="$PROJECT_DIR$/.idea/modules/j2pf.test.iml" />

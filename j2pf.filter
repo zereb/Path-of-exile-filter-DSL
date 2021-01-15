@@ -1,4 +1,35 @@
 Show
+BaseType "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads" "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves" "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask"
+PlayAlertSound 8 300
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+MinimapIcon 0 Blue Circle
+SetBorderColor 30 144 255 255
+
+Show
+Class "Gems"
+AlternateQuality True 
+SetFontSize 45
+SetBorderColor 30 150 180 255
+
+Show
+Replica True 
+Rarity = Unique
+PlayAlertSound 6 300
+SetTextColor 175 96 37 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 103 68 167 255
+
+Show
+Class "Trinket" "Heist Target" "Contract" "Blueprint"
+SetTextColor 74 230 56 255
+SetFontSize 45
+PlayEffect Green
+MinimapIcon 0 Green Circle
+SetBorderColor 74 230 56 255
+
+Show
 BaseType "Infused Engineer's Orb" "Time-light Scroll" "Fragmentation Scroll" "Deregulation Scroll" "Electroshock Scroll" "Haemocombustion Scroll" "Specularity Scroll" "Facetor's Lens"
 Class "Stackable Currency"
 PlayAlertSound 1 300
@@ -6,13 +37,6 @@ SetTextColor 0 0 0 255
 SetFontSize 45
 SetBackgroundColor 213 159 0 255
 SetBorderColor 0 0 0 255
-
-Show
-Class "Harvest Seed"
-SetTextColor 231 180 120 255
-SetFontSize 45
-SetBackgroundColor 0 0 0 255
-SetBorderColor 231 180 120 255
 
 Show
 BaseType "Delirium Orb"
@@ -369,8 +393,18 @@ SetBackgroundColor 184 218 242 255
 SetBorderColor 136 136 255 255
 
 Show
+BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring"
+ItemLevel >= 84 
+Rarity < Rare 
+PlayAlertSound 8 300
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+MinimapIcon 0 Blue Circle
+SetBorderColor 30 144 255 255
+
+Show
 HasInfluence  "Elder" "Shaper" "Warlord" "Hunter" "Crusader" "Redeemer" 
-BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe"
+BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Astral Plate" "Vaal Regalia" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe" "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads" "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves" "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask"
 ItemLevel >= 84 
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
@@ -391,8 +425,6 @@ SetBorderColor 255 215 0 255
 
 Show
 BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring"
-ItemLevel >= 84 
-Rarity < Rare 
 PlayAlertSound 8 300
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
@@ -734,9 +766,12 @@ Hide
 Rarity = Rare
 
 Hide
-Class "Gem"
+Class "Support Skill Gems"
+
+Hide
+Class "Active Skill Gems"
 
 Hide
 BaseType "Scroll of Wisdom" "Portal Scroll" "Armourer's Scrap" "Blacksmith's Whetstone"
-Class "Currency"
+Class "Stackable Currency"
 

@@ -71,8 +71,19 @@ public class ItemClasses {
     public static final String RuneDaggers ="Rune Daggers";
     public static final String AtlasRegionUpgradeItem ="Atlas Region Upgrade Item";
     public static final String HarvestInfrastructure  ="HarvestInfrastructure";
-    public static final String HarvestSeed = "Harvest Seed";
 
 
+    //heist
+
+    public static final String Trinket  = "Trinket";
+    public static final String HeistTarget = "Heist Target";
+    public static final String Contract = "Contract";
+    public static final String Blueprint = "Blueprint";
+    public static final String HeistCloak = "Heist Cloak";
+    public static final String HeistBrooch = "Heist Brooch";
+    public static final String HeistTool = "Heist Tool";
+    public static final String HeistGear = "Heist Gear";
+
+    //ritula
 
 }
