@@ -34,7 +34,7 @@ public class Utils {
     public static String genBaseTypes(String baseTypes){
         StringBuilder result = new StringBuilder();
             baseTypes.lines().forEach(line -> {
-                result.append("public static String ").append(line.replaceAll("[ '|,|\\-|)|(]", "")).append(" = \"").append(line).append("\";\n");
+                result.append("public static final String ").append(line.replaceAll("[ '|,|\\-|)|(]", "")).append(" = \"").append(line).append("\";\n");
             });
 
         return result.toString();

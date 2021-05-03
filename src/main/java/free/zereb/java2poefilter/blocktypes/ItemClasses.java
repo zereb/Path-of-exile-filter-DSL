@@ -84,6 +84,7 @@ public class ItemClasses {
     public static final String HeistTool = "Heist Tool";
     public static final String HeistGear = "Heist Gear";
 
-    //ritula
+    //ritual
 
+    //ultimatum
 }

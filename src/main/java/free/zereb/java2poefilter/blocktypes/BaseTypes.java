@@ -2570,4 +2570,57 @@ public class BaseTypes {
     public static final String BloodfilledVessel = "Blood-filled Vessel";
 
 
+    //ultimatum
+    public static final String Exsanguinate = "Exsanguinate";
+    public static final String CorruptingFever = "Corrupting Fever";
+    public static final String Reap = "Reap";
+    public static final String PetrifiedBlood = "Petrified Blood";
+    public static final String ArroganceSupport = "Arrogance Support";
+    public static final String BloodthirstSupport = "Bloodthirst Support";
+    public static final String CrueltySupport = "Cruelty Support";
+    public static final String LifetapSupport = "Lifetap Support";
+    public static final String WintersEmbrace = "Winter's Embrace";
+    public static final String SambodhisWisdom = "Sambodhi's Wisdom";
+    public static final String TheEnthusiasts = "The Enthusiasts";
+    public static final String BrokenPromises = "Broken Promises";
+    public static final String BrushPaintandPalette = "Brush, Paint and Palette";
+    public static final String DeadlyJoy = "Deadly Joy";
+    public static final String TheAdventuringSpirit = "The Adventuring Spirit";
+    public static final String TheEternalWar = "The Eternal War";
+    public static final String Prejudice = "Prejudice";
+    public static final String TheShortcut = "The Shortcut";
+    public static final String TheCardSharp = "The Card Sharp";
+    public static final String AModestRequest = "A Modest Request";
+    public static final String LuminousTrove = "Luminous Trove";
+    public static final String TheHook = "The Hook";
+    public static final String VeiledChaosOrb = "Veiled Chaos Orb";
+    public static final String NoxiousCatalyst = "Noxious Catalyst";
+    public static final String AcceleratingCatalyst = "Accelerating Catalyst";
+    public static final String UnstableCatalyst = "Unstable Catalyst";
+    public static final String TaintedOil = "Tainted Oil";
+    public static final String BlightedIncubator = "Blighted Incubator";
+    public static final String MorphingIncubator = "Morphing Incubator";
+    public static final String MaddeningIncubator = "Maddening Incubator";
+    public static final String RustedBlightScarab = "Rusted Blight Scarab";
+    public static final String PolishedBlightScarab = "Polished Blight Scarab";
+    public static final String GildedBlightScarab = "Gilded Blight Scarab";
+    public static final String WingedBlightScarab = "Winged Blight Scarab";
+    public static final String RustedAbyssScarab = "Rusted Abyss Scarab";
+    public static final String PolishedAbyssScarab = "Polished Abyss Scarab";
+    public static final String GildedAbyssScarab = "Gilded Abyss Scarab";
+    public static final String WingedAbyssScarab = "Winged Abyss Scarab";
+    public static final String SacredBlossom = "Sacred Blossom";
+    public static final String VaalReliquaryKey = "Vaal Reliquary Key";
+    public static final String ChronicleofAtzoatl = "Chronicle of Atzoatl";
+    public static final String InscribedUltimatum = "Inscribed Ultimatum";
+    public static final String SeaglassAmulet = "Seaglass Amulet";
+    public static final String BlessedBoots= "Blessed Boots";
+    public static final String ApothecarysGloves = "Apothecary's Gloves";
+    public static final String ArtilleryQuiver = "Artillery Quiver";
+    public static final String IoliteRing = "Iolite Ring";
+    public static final String GraspingMail = "Grasping Mail";
+    public static final String RoguesMarker = "Rogue's Marker";
+
+
+
 }

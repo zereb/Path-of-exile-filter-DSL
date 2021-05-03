@@ -25,11 +25,7 @@ public class Main {
         System.setOut(fileOut);
 
 
-        var vials = List.of(
-                VialofConsequence, VialofDominance, VialofFate, VialofSummoning, VialoftheRitual,
-                VialofTranscendence, VialofSacrifice, VialofAwakening, VialoftheGhost
-        );
-
+       //curencies & bulk stuf
         var fossils = List.of(
                 AberrantFossil, AethericFossil, BloodstainedFossil, BoundFossil, CorrodedFossil, DenseFossil,
                 EnchantedFossil, EncrustedFossil, FacetedFossil, FracturedFossil, FrigidFossil, GildedFossil,
@@ -37,44 +33,51 @@ public class Main {
                 PristineFossil, SanctifiedFossil, ScorchedFossil, SerratedFoil, ShudderingFossil, TangledFossil
         );
 
-        var blueMods = List.of(
-                oftheUnderground, Subterranean, ofCrafting, ofSpellcraft, ofWeaponcraft, // <- delve
-                "Citaqualotl", "Guatelitzi", "Matatl", "Puhuarte", "Tacati", "Topotante", "Xopec", // <- incursion
-                Brinerot, Mutewind, Redblade, // <- warbands
-                Merciless, Tyrannical, Dictators, Emperors, Flaring // <- weapon
-        );
-
-        var rareMapFragments = List.of(
-                FragmentoftheChimera, FragmentoftheHydra, FragmentoftheMinotaur, FragmentofthePhoenix,
-                EbersKey,YrielsKey, InyasKey, VolkuursKey, MortalHope, MortalIgnorance, MortalGrief, MortalRage, SacrificeatMidnight,
-                OfferingtotheGoddess, DivineVessel, "Scarab", "Breachstone", "Emblem"
+        var topIncubators = List.of(
+                TimeLostIncubator, ForebodingIncubator, GeomancersIncubator, ThaumaturgesIncubator
         );
 
         var topCurrency = List.of(
-                MirrorofKalandra, EternalOrb, DivineOrb, ExaltedOrb, AlbinoRhoaFeather, HarbingersOrb, OrbofAnnulment, MirrorShard, AwakenersOrb
-        );
-
-        var Oils = List.of(
-                AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil, IndigoOil
+                MirrorofKalandra, EternalOrb, DivineOrb, ExaltedOrb, AlbinoRhoaFeather, HarbingersOrb, OrbofAnnulment, MirrorShard, AwakenersOrb, VeiledChaosOrb
+                ,"Lens", "Tempering Orb", "Tailoring Orb", MavensOrb
         );
 
         var goodCurrency = List.of(
                 BlessedOrb, OrbofFusing, OrbofScouring, OrbofAlchemy, CartographersChisel, GlassblowersBauble, "Sextant",
-                SilverCoin, RegalOrb, OrbofRegret, ChaosOrb, GemcuttersPrism, VaalOrb, EngineersOrb, AncientOrb, OrbofBinding,
-                StackedDeck, BestiaryOrb, OrbofHorizons, ExaltedShard, "Catalyst"
-                //AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil
+                RegalOrb, OrbofRegret, ChaosOrb, GemcuttersPrism, VaalOrb, EngineersOrb, AncientOrb, OrbofBinding,
+                StackedDeck, BestiaryOrb, OrbofHorizons, ExaltedShard, "Catalyst", AnnulmentShard, HarbingersShard, OrbofUnmaking,
+                InfusedEngineersOrb, TimelightScroll, FragmentationScroll, DeregulationScroll, ElectroshockScroll, HaemocombustionScroll,
+                SpecularityScroll, DeliriumOrb, "Blessing"
         );
 
         var mehCurrency = List.of(
-                OrbofChance, OrbofAlteration, ChromaticOrb, JewellersOrb, OrbofTransmutation,
-                AnnulmentShard, BindingShard, HorizonShard, EngineersShard, AncientShard, ChaosShard, RegalShard, HarbingersShard
+                OrbofChance, OrbofAlteration, ChromaticOrb, JewellersOrb, OrbofTransmutation, SilverCoin,
+                BindingShard, HorizonShard, EngineersShard, AncientShard, ChaosShard, RegalShard, RoguesMarker, PerandusCoin
         );
 
-        var scarbCurrency = List.of(ArmourersScrap, BlacksmithsWhetstone, OrbofAugmentation);
+        var scarbCurrency = List.of(
+                ArmourersScrap, BlacksmithsWhetstone, OrbofAugmentation, ScrollofWisdom, PortalScroll,
+                AlterationShard, TransmutationShard
+        );
+
+        var Oils = List.of(
+                AmberOil, AzureOil, BlackOil, ClearOil, CrimsonOil, GoldenOil, OpalescentOil, SepiaOil, SilverOil, TealOil, VerdantOil, VioletOil, IndigoOil, TaintedOil
+        );
 
 
-        var topUniqs = List.of(SapphireFlask, StibniteFlask, GraniteFlask, GloriousPlate, SadistGarb, FullDragonscale, OccultistsVestment);
 
+        //fragments & misc
+        var vials = List.of(
+                VialofConsequence, VialofDominance, VialofFate, VialofSummoning, VialoftheRitual,
+                VialofTranscendence, VialofSacrifice, VialofAwakening, VialoftheGhost
+        );
+        var rareMapFragments = List.of(
+                FragmentoftheChimera, FragmentoftheHydra, FragmentoftheMinotaur, FragmentofthePhoenix,
+                EbersKey,YrielsKey, InyasKey, VolkuursKey, MortalHope, MortalIgnorance, MortalGrief, MortalRage, SacrificeatMidnight,
+                OfferingtotheGoddess, DivineVessel, "Scarab", "Breachstone", "Emblem", VaalReliquaryKey, ChronicleofAtzoatl,
+                InscribedUltimatum, RitualVessel, BloodfilledVessel, TheMavensWrit, AncientReliquaryKey, TimewornReliquaryKey, VaalReliquaryKey,
+                Simulacrum
+        );
         var topDivCards = List.of(
                 AbandonedWealth, AlluringBounty, BeautyThroughDeath, BurningBlood, HouseofMirrors, HuntersReward, ImmortalResolve, PrideBeforetheFall
                 ,PrideoftheFirstOnes, SevenYearsBadLuck, TheCelestialStone,TheDoctor, TheDragonsHeart, TheFiend, TheImmortal, TheIronBard, TheKingsHeart,
@@ -82,22 +85,49 @@ public class Main {
                 TheUndisputed, TheWolvenKingsBite, TheWorldEater, WealthandPower, ChaoticDisposition, DarkDreams, TheCartographer, TheCelestialJusticar,
                 TheEnlightened, TheMayor, TheProfessor, TheValkyrie, TheVoid, TheWind, TheWolf
         );
+        var quest = List.of(
+                Watchstone, MavensInvitation, //Echoes of atlas
+                StoneofPassage, SilverKey, GoldenKey, FlashpowderKeg, TreasureKey
+        );
+        var questClass = List.of(
+                PantheonSoul, QuestItems,
+                Trinket, HeistTarget, Contract, Blueprint, HeistCloak, HeistBrooch, HeistGear, HeistTool // heist suff
+        );
 
-        var topIncubators = List.of(TimeLostIncubator, ForebodingIncubator, GeomancersIncubator, ThaumaturgesIncubator);
 
 
-        var goodBodyArmors = List.of(AstralPlate, GloriousPlate, GladiatorPlate, AssassinBow, VaalRegalia, SacrificialGarb);
+
+        //items
+        var goodMods = List.of(
+                oftheUnderground, Subterranean, ofCrafting, ofSpellcraft, ofWeaponcraft, // <- delve
+                "Citaqualotl", "Guatelitzi", "Matatl", "Puhuarte", "Tacati", "Topotante", "Xopec", // <- incursion
+                Brinerot, Mutewind, Redblade, // <- warbands
+                Merciless, Tyrannical, Dictators, Emperors, Flaring // <- weapon
+        );
+
+        var topUniqs = List.of(
+                SapphireFlask, StibniteFlask, GraniteFlask, GloriousPlate, SadistGarb, FullDragonscale, OccultistsVestment
+        );
+
+
+        var goodBodyArmors = List.of(
+                AstralPlate, GloriousPlate, GladiatorPlate, AssassinsGarb, VaalRegalia, SacrificialGarb
+        );
         var goodWeapons = List.of(
                 BehemothMace, SiegeAxe, VaalBlade, EternalSword, JewelledFoil, VaalRapier,
-                GeminiClaw, ImperialClaw, Ambusher, Sai, ImbuedWand);
+                GeminiClaw, ImperialClaw, Ambusher, Sai, ImbuedWand
+        );
         var goodTwoHanders = List.of(ImperialStaff, EclipseStaff, Lathi,
                 SunderingAxe, EzomyteAxe, VaalAxe, DespotAxe, DespotAxe, VoidAxe, Fleshripper,
                 KaruiMaul, ColossusMallet, Piledriver, Meatgrinder, ImperialMaul, TerrorMaul, CoronalMaul,
                 HeadmansSword, ReaverSword, EzomyteBlade, VaalGreatsword, LionSword, InfernalSword, ExquisiteBlade,
                 EzomyteStaff, MaelströmStaff, JudgementStaff);
-        var goodArmor = List.of(FingerlessSilkGloves, TwoTonedBoots, TitanGreaves, SpikedGloves, GrippedGloves, RoyalBurgonet, HubrisCirclet);
-        var goodshields = List.of(PinnacleTowerShield, ColossalTowerShield, EzomyteTowerShield, TitaniumSpiritShield);
-
+        var goodArmor = List.of(
+                FingerlessSilkGloves, TwoTonedBoots, TitanGreaves, SpikedGloves, GrippedGloves, RoyalBurgonet, HubrisCirclet
+        );
+        var goodshields = List.of(
+                PinnacleTowerShield, ColossalTowerShield, EzomyteTowerShield, TitaniumSpiritShield
+        );
 
         var goodRares = new LinkedList<>(goodBodyArmors);
         goodRares.addAll(goodWeapons);
@@ -105,10 +135,10 @@ public class Main {
         goodRares.addAll(goodArmor);
         goodRares.addAll(goodshields);
 
-
-
         var craftingBases = List.of(
-                AstralPlate, VaalRegalia, TitanGauntlets, HubrisCirclet, TwoStoneRing, DiamondRing,
+                AstralPlate, VaalRegalia, SadistGarb, // body armors
+                TitanGauntlets, HubrisCirclet,
+                TwoStoneRing, DiamondRing, PrismaticRing, OnyxAmulet, TurquoiseAmulet, AgateAmulet, CitrineAmulet, //jewelery
                 SiegeAxe, JewelledFoil, VaalRapier, GeminiClaw, Sai, Ambusher,
                 MaelströmStaff, ExquisiteBlade, InfernalSword, LionSword, VaalGreatsword, EzomyteBlade, ReaverSword,
                 CoronalMaul, ImperialMaul, Meatgrinder,
@@ -116,107 +146,44 @@ public class Main {
         );
 
         var atlasBases = List.of(
-                VermillionRing, CeruleanRing, ConvokingWand,
-                OpalRing, CrystalBelt, SpikedGloves, GrippedGloves, FingerlessSilkGloves, VanguardBelt, BoneHelmet,
-                BluePearlAmulet, MarbleAmulet, SteelRing, ConvokingWand, VermillionRing, CeruleanRing
+                VermillionRing, CeruleanRing, OpalRing, SteelRing, IoliteRing,
+                BluePearlAmulet, MarbleAmulet, SeaglassAmulet, CrystalBelt,  VanguardBelt,
+                SpikedGloves, GrippedGloves, FingerlessSilkGloves, ApothecarysGloves, TwoTonedBoots, BlessedBoots,
+                ConvokingWand, BoneHelmet, GraspingMail, ArtilleryQuiver
         );
 
-        var ritualBases = List.of(DreamquestSlippers, CloudwhisperBoots, BrimstoneTreads, NightwindSlippers, WindbreakBoots, DarksteelTreads, DuskwalkSlippers, StormriderBoots, BasemetalTreads,
+        var ritualBases = List.of(
+                DreamquestSlippers, CloudwhisperBoots, BrimstoneTreads, NightwindSlippers, WindbreakBoots, DarksteelTreads, DuskwalkSlippers, StormriderBoots, BasemetalTreads,
                 DebilitationGauntlets, GruellingGauntlets, TaxingGauntlets, SinistralGloves, SouthswingGloves, GaucheGloves, NexusGloves, AetherwindGloves, LeylineGloves,
                 BlizzardCrown, WinterCrown, GaleCrown, ArchdemonCrown, DemonCrown, ImpCrown, AtonementMask, PenitentMask, SorrowMask
         );
 
 
-        //ritual
+        //currency & bulk
         Show.block()
-                .baseType(ritualBases)
-                .setStyle(Styles.atlasBases)
-                .print();
-
-        var ritualCurrency = List.of(OrbofUnmaking, MavensOrb, RitualSplinter, RitualVessel, CrescentSplinter);
+                .poeClass(Currency)
+                .baseType(topCurrency)
+                .setStyle(Styles.currencyExalt).print();
         Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(ritualCurrency)
-                .setStyle(Styles.currecyChaos)
-                .print();
-
-        Show.block()
-                .baseType(Watchstone)
-                .setStyle(Styles.questItems)
-                .print();
-
-        Show.block()
-                .baseType(MavensInvitation)
-                .setStyle(Styles.questItems)
-                .print();
-
-        var ritualFragments = List.of(TheMavensWrit, BloodfilledVessel);
-        Show.block()
-                .baseType(ritualFragments)
-                .setStyle(Styles.mapFragmentRare)
-                .print();
-
-
-
-        //Heist
-        Show.block()
-                .poeClass(Gems)
-                .addPropperty("AlternateQuality True")
-                .setStyle(Styles.gem).print();
-        Show.block()
-                .rarity(Rarity.Unique)
-                .addPropperty("Replica True")
-                .setStyle(Styles.uniqueAlternate)
-                .print();
-        Show.block()
-                .poeClass(List.of(Trinket, HeistTarget, Contract, Blueprint))
-                .setStyle(Styles.questItems).print();
-        Show.block()
-                .poeClass(List.of(HeistCloak, HeistBrooch, HeistGear, HeistTool));
-
-        //Harvest
-        var harvestCurrency = List.of(
-                InfusedEngineersOrb, TimelightScroll, FragmentationScroll, DeregulationScroll, ElectroshockScroll, HaemocombustionScroll,
-                SpecularityScroll, FacetorsLens
-        );
-
-        Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(harvestCurrency)
+                .poeClass(Currency)
+                .baseType(goodCurrency)
                 .setStyle(Styles.currecyChaos).print();
-
-        //Delirium
         Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(DeliriumOrb)
-                .setStyle(Styles.currecyChaos).print();
-
+                .poeClass(Currency)
+                .baseType(mehCurrency)
+                .setStyle(Styles.currencyAlt).print();
         Show.block()
-                .poeClass(MapFragments)
-                .baseType(Simulacrum)
-                .setStyle(Styles.splinters).print();
+                .poeClass(Currency)
+                .baseType(scarbCurrency)
+                .addPropperty("AreaLevel < 68")
+                .setStyle(Styles.currencyAlt).print();
         Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(SimulacrumSplinter)
-                .setStyle(Styles.splinters).print();
-
-        Show.block()
-                .poeClass(Jewel)
-                .baseType("Cluster")
-                .setStyle(Styles.gem).print();
-        //Metamorph
-        Show.block()
-                .poeClass(Gems)
-                .baseType("Awakened")
-                .setStyle(Styles.gemExalt).print();
-
-        //Blight
+                .baseType(List.of("Essence of", RemnantofCorruption))
+                .setStyle(Styles.essense).print();
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType(Oils)
                 .setStyle(Styles.splinters).print();
-
-        //Legion
         Show.block()
                 .poeClass(Incubator)
                 .baseType(topIncubators)
@@ -224,18 +191,6 @@ public class Main {
         Show.block()
                 .poeClass(Incubator)
                 .setStyle(Styles.splinters).print();
-
-        //incursion
-        Show.block()
-                .baseType(StoneofPassage)
-                .setStyle(Styles.questItems).print();
-        Show.block()
-                .baseType(vials)
-                .setStyle(Styles.mapFragmentRare).print();
-        //delve
-        Show.block()
-                .baseType(TimewornReliquaryKey)
-                .setStyle(Styles.currencyExalt).print();
         Show.block()
                 .poeClass(Currency)
                 .baseType(fossils)
@@ -244,38 +199,16 @@ public class Main {
                 .poeClass(Currency)
                 .baseType("Resonator")
                 .setStyle(Styles.currecyChaos).print();
-       //misc
+
+
+        //Fregments & misc
         Show.block()
-                .hasExplicitMod(blueMods)
-                .setStyle(Styles.blueWithMod).print();
-        Show.block()
-                .poeClass(StackableCurrency)
-                .baseType(PerandusCoin)
-                .setStyle(Styles.splinters).print();
+                .baseType(vials)
+                .setStyle(Styles.mapFragmentRare).print();
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType("Splinter")
                 .setStyle(Styles.splinters).print();
-        Show.block()
-                .poeClass(Jewel)
-                .rarity(Rarity.Rare)
-                .setStyle(Styles.jewelRare).print();
-        Show.block()
-                .poeClass(Jewel)
-                .rarity(Rarity.Magic)
-                .setStyle(Styles.jewelMagic).print();
-        Show.block()
-                .poeClass(StackableCurrency)
-                .baseType("Blessing")
-                .setStyle(Styles.mapFragmentRare).print();
-        Show.block()
-                .poeClass(Amulets)
-                .baseType("Talisman")
-                .setStyle(new Style()
-                        .setBackgroundColor(Color.black)
-                        .setBorderColor(new Color(50, 230, 100))
-                        .setFontSize(45)
-                ).print();
         Show.block()
                 .poeClass(StackableCurrency)
                 .baseType("Prophecy")
@@ -283,21 +216,25 @@ public class Main {
         Show.block()
                 .poeClass(Piece)
                 .setStyle(Styles.splinters).print();
-        //6 and 5 links
-        Show.block()
-                .addPropperty("LinkedSockets = 6")
-                .setStyle(Styles.currencyExalt).print();
-        Show.block()
-                .addPropperty("Sockets = 6")
-                .setStyle(Styles.utilFlask).print();
-        Show.block()
-                .addPropperty("LinkedSockets = 5")
-                .setStyle(Styles.utilFlask).print();
-
-        //map and fragmets
         Show.block()
                 .baseType(rareMapFragments)
                 .setStyle(Styles.mapFragmentRare).print();
+        Show.block()
+                .poeClass(DivinationCard)
+                .baseType(topDivCards)
+                .setStyle(Styles.divcardExalt).print();
+        Show.block()
+                .poeClass(DivinationCard)
+                .setStyle(Styles.divCardChaos).print();
+        Show.block()
+                .poeClass(questClass)
+                .setStyle(Styles.questItems).print();
+        Show.block()
+                .baseType(quest)
+                .setStyle(Styles.questItems).print();
+
+
+        //maps
         Show.block()
                 .poeClass(MapFragments)
                 .setStyle(Styles.mapFragmentCommon).print();
@@ -322,32 +259,43 @@ public class Main {
                 .addPropperty("MapTier >= 1")
                 .setStyle(Styles.mapWhite).print();
 
-        //currency
+
+        //jewles & talismans
         Show.block()
-                .poeClass(Currency)
-                .baseType(topCurrency)
+                .poeClass(Jewel)
+                .rarity(Rarity.Rare)
+                .setStyle(Styles.jewelRare).print();
+        Show.block()
+                .poeClass(Jewel)
+                .rarity(Rarity.Magic)
+                .setStyle(Styles.jewelMagic).print();
+        Show.block()
+                .poeClass(Jewel)
+                .baseType("Cluster")
+                .setStyle(Styles.gem).print();
+        Show.block()
+                .poeClass(Amulets)
+                .baseType("Talisman")
+                .setStyle(new Style()
+                        .setBackgroundColor(Color.black)
+                        .setBorderColor(new Color(50, 230, 100))
+                        .setFontSize(45)
+                ).print();
+
+       //6 and 5 links
+        Show.block()
+                .addPropperty("LinkedSockets = 6")
                 .setStyle(Styles.currencyExalt).print();
         Show.block()
-                .poeClass(Currency)
-                .baseType(goodCurrency)
-                .setStyle(Styles.currecyChaos).print();
+                .addPropperty("Sockets = 6")
+                .setStyle(Styles.utilFlask).print();
         Show.block()
-                .poeClass(Currency)
-                .baseType(mehCurrency)
-                .setStyle(Styles.currencyAlt).print();
-        Show.block()
-                .poeClass(Currency)
-                .baseType(scarbCurrency)
-                .addPropperty("AreaLevel < 68")
-                .setStyle(Styles.currencyAlt).print();
-        Show.block()
-                .baseType("Essence of")
-                .setStyle(Styles.essense).print();
-        Show.block()
-                .baseType(RemnantofCorruption)
-                .setStyle(Styles.essense).print();
+                .addPropperty("LinkedSockets = 5")
+                .setStyle(Styles.utilFlask).print();
 
-        //uniques
+
+
+        //uniques items whites
         Show.block()
                 .rarity(Rarity.Unique)
                 .baseType(topUniqs)
@@ -355,38 +303,32 @@ public class Main {
         Show.block()
                 .rarity(Rarity.Unique)
                 .setStyle(Styles.uniqueChaos).print();
-
         Show.block()
-                .poeClass(DivinationCard)
-                .baseType(topDivCards)
-                .setStyle(Styles.divcardExalt).print();
-        Show.block()
-                .poeClass(DivinationCard)
-                .setStyle(Styles.divCardChaos).print();
-
-        //rares and craftin
+                .hasExplicitMod(goodMods)
+                .setStyle(Styles.blueWithMod).print();
 
         var shaperList = new LinkedList<>(atlasBases);
         shaperList.addAll(craftingBases);
         shaperList.addAll(ritualBases);
-        Show.block()
-                .addPropperty("Rarity < Rare")
-                .addPropperty("ItemLevel >= 84")
-                .baseType(atlasBases)
-                .setStyle(Styles.atlasBases).print();
+
         Show.block()
                 .addPropperty("ItemLevel >= 84")
                 .HasInfuence(Influence.all)
                 .baseType(shaperList)
-                .setStyle(Styles.currencyExalt).print();
+                .setStyle(Styles.elderShaperItem).print();
         Show.block()
                 .addPropperty("Rarity < Rare")
                 .addPropperty("ItemLevel >= 84")
                 .baseType(craftingBases)
                 .setStyle(Styles.whiteBases).print();
+
         Show.block()
                 .baseType(atlasBases)
                 .setStyle(Styles.atlasBases).print();
+        Show.block()
+                .baseType(ritualBases)
+                .setStyle(Styles.atlasBases).print();
+
 
         Show.block()
                 .shaperitem(true)
@@ -399,16 +341,30 @@ public class Main {
                 .rarity(Rarity.Rare)
                 .poeClass(List.of("Belts", "Amulets", "Rings"))
                 .setStyle(Styles.jewelRare).print();
-
         Show.block()
                 .rarity(Rarity.Rare)
                 .baseType(goodRares)
                 .setStyle(Styles.rareGood).print();
 
+        Show.block()
+                .addPropperty("Identified True")
+                .rarity(Rarity.Rare).print();
 
+
+
+        //gems
         Show.block()
                 .poeClass("Gem")
-                .baseType(List.of("Enhance", "Empower", "Enlighten"))
+                .addPropperty("AlternateQuality True")
+                .setStyle(Styles.gem).print();
+        Show.block()
+                .rarity(Rarity.Unique)
+                .addPropperty("Replica True")
+                .setStyle(Styles.uniqueAlternate)
+                .print();
+        Show.block()
+                .poeClass("Gem")
+                .baseType(List.of(EnhanceSupport, EmpowerSupport, EnlightenSupport, "Awakened"))
                 .setStyle(Styles.gemExalt).print();
         Show.block()
                 .poeClass("Gem")
@@ -420,21 +376,12 @@ public class Main {
                 .setStyle(Styles.gemExalt).print();
         Show.block()
                 .poeClass("Gem")
-                .baseType(List.of("Portal", "Added Chaos Damage", "Vaal"))
+                .baseType(List.of(Portal, AddedChaosDamageSupport, "Vaal"))
                 .setStyle(Styles.gem).print();
 
-        Show.block()
-                .poeClass(List.of("Quest", "Pantheon Soul"))
-                .setStyle(Styles.questItems).print();
-        Show.block()
-                .baseType(List.of("Silver Key", "Golden Key", "Treasure Key", "Keg"))
-                .setStyle(Styles.questItems).print();
-
-        Show.block()
-                .addPropperty("Identified True")
-                .rarity(Rarity.Rare).print();
 
 
+        //leveling stuff
         HashMap<Integer, String> lifeFlasks = new HashMap<>();
         HashMap<Integer, String> manaFlasks = new HashMap<>();
 
@@ -485,27 +432,27 @@ public class Main {
                 .addPropperty("ItemLevel < 16")
                 .poeClass(Rings)
                 .setStyle(Styles.levleling).print();
-        Show.block()
-                .poeClass(meleeLeveling2h)
-                .addPropperty("DropLevel > 5")
-                .addPropperty("ItemLevel < 10")
-                .setStyle(Styles.levleling).print();
-        Show.block()
-                .poeClass(meleeLeveling1h)
-                .addPropperty("DropLevel > 5")
-                .addPropperty("ItemLevel < 10")
-                .setStyle(Styles.levleling).print();
-
-
-
-        for (int i = 10; i <= 60; i += 10) {
-            Show.block()
-                    .poeClass(meleeLeveling2h)
-                    .addPropperty("DropLevel > " + i)
-                    .addPropperty("ItemLevel < " + (i + 10))
-                    .setStyle(Styles.levleling).print();
-
-        }
+//        Show.block()
+//                .poeClass(meleeLeveling2h)
+//                .addPropperty("DropLevel > 5")
+//                .addPropperty("ItemLevel < 10")
+//                .setStyle(Styles.levleling).print();
+//        Show.block()
+//                .poeClass(meleeLeveling1h)
+//                .addPropperty("DropLevel > 5")
+//                .addPropperty("ItemLevel < 10")
+//                .setStyle(Styles.levleling).print();
+//
+//
+//
+//        for (int i = 10; i <= 60; i += 10) {
+//            Show.block()
+//                    .poeClass(meleeLeveling2h)
+//                    .addPropperty("DropLevel > " + i)
+//                    .addPropperty("ItemLevel < " + (i + 10))
+//                    .setStyle(Styles.levleling).print();
+//
+//        }
 
         Show.block()
                 .addPropperty("ItemLevel < 68")
@@ -535,6 +482,13 @@ public class Main {
                 .addPropperty("ItemLevel < 3")
                 .rarity(Rarity.Normal).print();
 
+        Hide.block()
+                .poeClass("Gem").print();
+        Hide.block()
+                .poeClass(StackableCurrency)
+                .baseType(scarbCurrency).print();
+
+
 
         Hide.block()
                 .rarity(Rarity.Normal).print();
@@ -542,14 +496,6 @@ public class Main {
                 .rarity(Rarity.Magic).print();
         Hide.block()
                 .rarity(Rarity.Rare).print();
-        Hide.block()
-                .poeClass(SupportSkillGems).print();
-        Hide.block()
-                .poeClass(ActiveSkillGems).print();
-        Hide.block()
-                .poeClass(StackableCurrency)
-                .baseType(List.of(ScrollofWisdom, PortalScroll, ArmourersScrap, BlacksmithsWhetstone)).print();
-
 
     }
 
