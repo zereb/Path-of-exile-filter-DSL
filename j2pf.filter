@@ -1,34 +1,43 @@
 Show
-Class "Gems"
-AlternateQuality True 
-SetFontSize 45
-SetBorderColor 30 150 180 255
-
-Show
-Replica True 
-Rarity = Unique
-PlayAlertSound 6 300
-SetTextColor 175 96 37 255
-SetFontSize 45
-SetBackgroundColor 0 0 0 255
-SetBorderColor 103 68 167 255
-
-Show
-BaseType "Cluster"
-Class "Jewel"
-SetFontSize 45
-SetBorderColor 30 150 180 255
-
-Show
-BaseType "Awakened"
-Class "Gems"
+BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Harbinger's Orb" "Orb of Annulment" "Mirror Shard" "Awakener's Orb" "Veiled Chaos Orb" "Lens" "Tempering Orb" "Tailoring Orb" "Maven's Orb"
+Class "Currency"
 PlayAlertSound 2 300
-SetTextColor 30 150 180 255
+SetTextColor 255 0 0 255
 SetFontSize 45
-PlayEffect Blue
+PlayEffect Red
 SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Blue Star
-SetBorderColor 30 150 180 255
+MinimapIcon 0 Red Star
+SetBorderColor 255 0 0 255
+
+Show
+BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Glassblower's Bauble" "Sextant" "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Engineer's Orb" "Ancient Orb" "Orb of Binding" "Stacked Deck" "Bestiary Orb" "Orb of Horizons" "Exalted Shard" "Catalyst" "Annulment Shard" "Harbinger's Shard" "Orb of Unmaking" "Infused Engineer's Orb" "Time-light Scroll" "Fragmentation Scroll" "Deregulation Scroll" "Electroshock Scroll" "Haemocombustion Scroll" "Specularity Scroll" "Delirium Orb" "Blessing"
+Class "Currency"
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+SetBackgroundColor 213 159 0 255
+SetBorderColor 0 0 0 255
+
+Show
+BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Orb of Transmutation" "Silver Coin" "Binding Shard" "Horizon Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Regal Shard" "Rogue's Marker" "Perandus Coin"
+Class "Currency"
+SetTextColor 170 158 130 255
+SetFontSize 40
+
+Show
+AreaLevel < 68 
+BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Scroll of Wisdom" "Portal Scroll" "Alteration Shard" "Transmutation Shard"
+Class "Currency"
+SetTextColor 170 158 130 255
+SetFontSize 40
+
+Show
+BaseType "Essence of" "Remnant of Corruption"
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 40
+SetBackgroundColor 15 180 200 255
+SetBorderColor 0 0 0 255
 
 Show
 BaseType "Amber Oil" "Azure Oil" "Black Oil" "Clear Oil" "Crimson Oil" "Golden Oil" "Opalescent Oil" "Sepia Oil" "Silver Oil" "Teal Oil" "Verdant Oil" "Violet Oil" "Indigo Oil" "Tainted Oil"
@@ -57,15 +66,6 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
 
 Show
-BaseType "Vial of Consequence" "Vial of Dominance" "Vial of Fate" "Vial of Summoning" "Vial of the Ritual" "Vial of Transcendence" "Vial of Sacrifice" "Vial of Awakening" "Vial of the Ghost"
-PlayAlertSound 6 300
-SetFontSize 45
-PlayEffect White
-SetBackgroundColor 0 0 0 255
-MinimapIcon 0 White Hexagon
-SetBorderColor 0 255 255 255
-
-Show
 BaseType "Aberrant Fossil" "Aetheric Fossil" "Bloodstained Fossil" "Bound Fossil" "Corroded Fossil" "Dense Fossil" "Enchanted Fossil" "Encrusted Fossil" "Faceted Fossil" "Fractured Fossil" "Frigid Fossil" "Gilded Fossil" "Glyphic Fossil" "Hollow Fossil" "Jagged Fossil" "Lucent Fossil" "Metallic Fossil" "Perfect Fossil" "Prismatic Fossil" "Pristine Fossil" "Sanctified Fossil" "Scorched Fossil" "Serrated Foil" "Shuddering Fossil" "Tangled Fossil"
 Class "Currency"
 PlayAlertSound 1 300
@@ -84,12 +84,13 @@ SetBackgroundColor 213 159 0 255
 SetBorderColor 0 0 0 255
 
 Show
-HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's" "Emperor's" "Flaring"
-PlayAlertSound 9 300
-SetTextColor 255 255 255 255
+BaseType "Vial of Consequence" "Vial of Dominance" "Vial of Fate" "Vial of Summoning" "Vial of the Ritual" "Vial of Transcendence" "Vial of Sacrifice" "Vial of Awakening" "Vial of the Ghost"
+PlayAlertSound 6 300
 SetFontSize 45
+PlayEffect White
 SetBackgroundColor 0 0 0 255
-SetBorderColor 136 136 255 255
+MinimapIcon 0 White Hexagon
+SetBorderColor 0 255 255 255
 
 Show
 BaseType "Splinter"
@@ -98,27 +99,6 @@ SetTextColor 231 180 120 255
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
-
-Show
-Class "Jewel"
-Rarity = Rare
-SetTextColor 231 180 120 255
-SetFontSize 45
-SetBorderColor 255 200 0 255
-
-Show
-Class "Jewel"
-Rarity = Magic
-SetTextColor 100 100 242 255
-SetFontSize 45
-SetBorderColor 100 100 242 255
-
-Show
-BaseType "Talisman"
-Class "Amulets"
-SetFontSize 45
-SetBackgroundColor 0 0 0 255
-SetBorderColor 50 230 100 255
 
 Show
 BaseType "Prophecy"
@@ -137,28 +117,6 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 231 180 120 255
 
 Show
-LinkedSockets = 6 
-PlayAlertSound 2 300
-SetTextColor 255 0 0 255
-SetFontSize 45
-PlayEffect Red
-SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Red Star
-SetBorderColor 255 0 0 255
-
-Show
-Sockets = 6 
-SetFontSize 40
-SetBackgroundColor 128 128 128 255
-SetBorderColor 200 200 200 255
-
-Show
-LinkedSockets = 5 
-SetFontSize 40
-SetBackgroundColor 128 128 128 255
-SetBorderColor 200 200 200 255
-
-Show
 BaseType "Fragment of the Chimera" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix" "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key" "Mortal Hope" "Mortal Ignorance" "Mortal Grief" "Mortal Rage" "Sacrifice at Midnight" "Offering to the Goddess" "Divine Vessel" "Scarab" "Breachstone" "Emblem" "Vaal Reliquary Key" "Chronicle of Atzoatl" "Inscribed Ultimatum" "Ritual Vessel" "Blood-filled Vessel" "The Maven's Writ" "Ancient Reliquary Key" "Timeworn Reliquary Key" "Vaal Reliquary Key" "Simulacrum"
 PlayAlertSound 6 300
 SetFontSize 45
@@ -166,6 +124,41 @@ PlayEffect White
 SetBackgroundColor 0 0 0 255
 MinimapIcon 0 White Hexagon
 SetBorderColor 0 255 255 255
+
+Show
+BaseType "Abandoned Wealth" "Alluring Bounty" "Beauty Through Death" "Burning Blood" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Pride Before the Fall" "Pride of the First Ones" "Seven Years Bad Luck" "The Celestial Stone" "The Doctor" "The Dragon's Heart" "The Fiend" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Life Thief" "The Nurse" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Spark and the Flame" "The Undaunted" "The Undisputed" "The Wolven King's Bite" "The World Eater" "Wealth and Power" "Chaotic Disposition" "Dark Dreams" "The Cartographer" "The Celestial Justicar" "The Enlightened" "The Mayor" "The Professor" "The Valkyrie" "The Void" "The Wind" "The Wolf"
+Class "Divination Card"
+PlayAlertSound 2 300
+SetTextColor 0 0 0 255
+SetFontSize 45
+PlayEffect Blue
+SetBackgroundColor 255 255 255 255
+MinimapIcon 0 Blue Square
+SetBorderColor 184 218 242 255
+
+Show
+Class "Divination Card"
+PlayAlertSound 1 300
+SetTextColor 0 0 0 255
+SetFontSize 40
+SetBackgroundColor 184 218 242 255
+SetBorderColor 136 136 255 255
+
+Show
+Class "Pantheon Soul" "Quest Items" "Trinket" "Heist Target" "Contract" "Blueprint" "Heist Cloak" "Heist Brooch" "Heist Gear" "Heist Tool"
+SetTextColor 74 230 56 255
+SetFontSize 45
+PlayEffect Green
+MinimapIcon 0 Green Circle
+SetBorderColor 74 230 56 255
+
+Show
+BaseType "Watchstone" "Maven's Invitation" "Stone of Passage" "Silver Key" "Golden Key" "Flashpowder Keg" "Treasure Key"
+SetTextColor 74 230 56 255
+SetFontSize 45
+PlayEffect Green
+MinimapIcon 0 Green Circle
+SetBorderColor 74 230 56 255
 
 Show
 Class "Map Fragments"
@@ -220,8 +213,34 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 0 0 0 255
 
 Show
-BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Harbinger's Orb" "Orb of Annulment" "Mirror Shard" "Awakener's Orb" "Veiled Chaos Orb" "Lens" "Tempering Orb" "Tailoring Orb" "Maven's Orb"
-Class "Currency"
+Class "Jewel"
+Rarity = Rare
+SetTextColor 231 180 120 255
+SetFontSize 45
+SetBorderColor 255 200 0 255
+
+Show
+Class "Jewel"
+Rarity = Magic
+SetTextColor 100 100 242 255
+SetFontSize 45
+SetBorderColor 100 100 242 255
+
+Show
+BaseType "Cluster"
+Class "Jewel"
+SetFontSize 45
+SetBorderColor 30 150 180 255
+
+Show
+BaseType "Talisman"
+Class "Amulets"
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 50 230 100 255
+
+Show
+LinkedSockets = 6 
 PlayAlertSound 2 300
 SetTextColor 255 0 0 255
 SetFontSize 45
@@ -231,42 +250,16 @@ MinimapIcon 0 Red Star
 SetBorderColor 255 0 0 255
 
 Show
-BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Glassblower's Bauble" "Sextant" "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Engineer's Orb" "Ancient Orb" "Orb of Binding" "Stacked Deck" "Bestiary Orb" "Orb of Horizons" "Exalted Shard" "Catalyst" "Annulment Shard" "Harbinger's Shard" "Orb of Unmaking" "Infused Engineer's Orb" "Time-light Scroll" "Fragmentation Scroll" "Deregulation Scroll" "Electroshock Scroll" "Haemocombustion Scroll" "Specularity Scroll" "Delirium Orb" "Blessing"
-Class "Currency"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 45
-SetBackgroundColor 213 159 0 255
-SetBorderColor 0 0 0 255
+Sockets = 6 
+SetFontSize 40
+SetBackgroundColor 128 128 128 255
+SetBorderColor 200 200 200 255
 
 Show
-BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Orb of Transmutation" "Silver Coin" "Binding Shard" "Horizon Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Regal Shard" "Rogue's Marker" "Perandus Coin"
-Class "Currency"
-SetTextColor 170 158 130 255
+LinkedSockets = 5 
 SetFontSize 40
-
-Show
-AreaLevel < 68 
-BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Scroll of Wisdom" "Portal Scroll" "Alteration Shard" "Transmutation Shard"
-Class "Currency"
-SetTextColor 170 158 130 255
-SetFontSize 40
-
-Show
-BaseType "Essence of"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 40
-SetBackgroundColor 15 180 200 255
-SetBorderColor 0 0 0 255
-
-Show
-BaseType "Remnant of Corruption"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 40
-SetBackgroundColor 15 180 200 255
-SetBorderColor 0 0 0 255
+SetBackgroundColor 128 128 128 255
+SetBorderColor 200 200 200 255
 
 Show
 BaseType "Sapphire Flask" "Stibnite Flask" "Granite Flask" "Glorious Plate" "Sadist Garb" "Full Dragonscale" "Occultist's Vestment"
@@ -288,27 +281,16 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 175 96 37 255
 
 Show
-BaseType "Abandoned Wealth" "Alluring Bounty" "Beauty Through Death" "Burning Blood" "House of Mirrors" "Hunter's Reward" "Immortal Resolve" "Pride Before the Fall" "Pride of the First Ones" "Seven Years Bad Luck" "The Celestial Stone" "The Doctor" "The Dragon's Heart" "The Fiend" "The Immortal" "The Iron Bard" "The King's Heart" "The Last One Standing" "The Life Thief" "The Nurse" "The Queen" "The Risk" "The Saint's Treasure" "The Samurai's Eye" "The Spark and the Flame" "The Undaunted" "The Undisputed" "The Wolven King's Bite" "The World Eater" "Wealth and Power" "Chaotic Disposition" "Dark Dreams" "The Cartographer" "The Celestial Justicar" "The Enlightened" "The Mayor" "The Professor" "The Valkyrie" "The Void" "The Wind" "The Wolf"
-Class "Divination Card"
-PlayAlertSound 2 300
-SetTextColor 0 0 0 255
+HasExplicitMod "of the Underground" "Subterranean" "of Crafting" "of Spellcraft" "of Weaponcraft" "Citaqualotl" "Guatelitzi" "Matatl" "Puhuarte" "Tacati" "Topotante" "Xopec" "Brinerot" "Mutewind" "Redblade" "Merciless" "Tyrannical" "Dictator's" "Emperor's" "Flaring"
+PlayAlertSound 9 300
+SetTextColor 255 255 255 255
 SetFontSize 45
-PlayEffect Blue
-SetBackgroundColor 255 255 255 255
-MinimapIcon 0 Blue Square
-SetBorderColor 184 218 242 255
-
-Show
-Class "Divination Card"
-PlayAlertSound 1 300
-SetTextColor 0 0 0 255
-SetFontSize 40
-SetBackgroundColor 184 218 242 255
+SetBackgroundColor 0 0 0 255
 SetBorderColor 136 136 255 255
 
 Show
 HasInfluence  "Elder" "Shaper" "Warlord" "Hunter" "Crusader" "Redeemer" 
-BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Grasping Mail" "Seaglass Amulet" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Iolite Ring" "Astral Plate" "Vaal Regalia" "Sadist Garb" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe" "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads" "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves" "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask"
+BaseType "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Iolite Ring" "Blue Pearl Amulet" "Marble Amulet" "Seaglass Amulet" "Crystal Belt" "Vanguard Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Apothecary's Gloves" "Two-Toned Boots" "Fugitive Boots" "Convoking Wand" "Bone Helmet" "Grasping Mail" "Artillery Quiver" "Astral Plate" "Vaal Regalia" "Sadist Garb" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Prismatic Ring" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe" "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads" "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves" "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask" "Runic Helm" "Runic Crest" "Runic Crown" "Runic Greaves" "Runic Sollerets" "Runic Sabatons" "Runic Gloves" "Runic Gages" "Runic Gauntlets"
 ItemLevel >= 84 
 SetTextColor 255 255 119 255
 SetFontSize 45
@@ -316,7 +298,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 127 127 127 255
 
 Show
-BaseType "Astral Plate" "Vaal Regalia" "Sadist Garb" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe"
+BaseType "Astral Plate" "Vaal Regalia" "Sadist Garb" "Titan Gauntlets" "Hubris Circlet" "Two-Stone Ring" "Diamond Ring" "Prismatic Ring" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Siege Axe" "Jewelled Foil" "Vaal Rapier" "Gemini Claw" "Sai" "Ambusher" "Maelström Staff" "Exquisite Blade" "Infernal Sword" "Lion Sword" "Vaal Greatsword" "Ezomyte Blade" "Reaver Sword" "Coronal Maul" "Imperial Maul" "Meatgrinder" "Fleshripper" "Void Axe" "Despot Axe" "Vaal Axe" "Sundering Axe" "Ezomyte Axe"
 ItemLevel >= 84 
 Rarity < Rare 
 SetTextColor 255 255 255 255
@@ -325,7 +307,7 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 215 0 255
 
 Show
-BaseType "Vermillion Ring" "Cerulean Ring" "Convoking Wand" "Opal Ring" "Crystal Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Vanguard Belt" "Bone Helmet" "Blue Pearl Amulet" "Marble Amulet" "Steel Ring" "Convoking Wand" "Vermillion Ring" "Cerulean Ring" "Grasping Mail" "Seaglass Amulet" "Blessed Boots" "Apothecary's Gloves" "Artillery Quiver" "Iolite Ring"
+BaseType "Vermillion Ring" "Cerulean Ring" "Opal Ring" "Steel Ring" "Iolite Ring" "Blue Pearl Amulet" "Marble Amulet" "Seaglass Amulet" "Crystal Belt" "Vanguard Belt" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves" "Apothecary's Gloves" "Two-Toned Boots" "Fugitive Boots" "Convoking Wand" "Bone Helmet" "Grasping Mail" "Artillery Quiver"
 PlayAlertSound 8 300
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
@@ -334,6 +316,14 @@ SetBorderColor 30 144 255 255
 
 Show
 BaseType "Dreamquest Slippers" "Cloudwhisper Boots" "Brimstone Treads" "Nightwind Slippers" "Windbreak Boots" "Darksteel Treads" "Duskwalk Slippers" "Stormrider Boots" "Basemetal Treads" "Debilitation Gauntlets" "Gruelling Gauntlets" "Taxing Gauntlets" "Sinistral Gloves" "Southswing Gloves" "Gauche Gloves" "Nexus Gloves" "Aetherwind Gloves" "Leyline Gloves" "Blizzard Crown" "Winter Crown" "Gale Crown" "Archdemon Crown" "Demon Crown" "Imp Crown" "Atonement Mask" "Penitent Mask" "Sorrow Mask"
+PlayAlertSound 8 300
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+MinimapIcon 0 Blue Circle
+SetBorderColor 30 144 255 255
+
+Show
+BaseType "Runic Helm" "Runic Crest" "Runic Crown" "Runic Greaves" "Runic Sollerets" "Runic Sabatons" "Runic Gloves" "Runic Gages" "Runic Gauntlets"
 PlayAlertSound 8 300
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
@@ -368,6 +358,25 @@ SetTextColor 255 215 0 255
 SetFontSize 45
 SetBackgroundColor 0 0 0 255
 SetBorderColor 255 215 0 255
+
+Show
+Rarity = Rare
+Identified True 
+
+Show
+Class "Gem"
+AlternateQuality True 
+SetFontSize 45
+SetBorderColor 30 150 180 255
+
+Show
+Replica True 
+Rarity = Unique
+PlayAlertSound 6 300
+SetTextColor 175 96 37 255
+SetFontSize 45
+SetBackgroundColor 0 0 0 255
+SetBorderColor 103 68 167 255
 
 Show
 BaseType "Enhance Support" "Empower Support" "Enlighten Support" "Awakened"
@@ -407,26 +416,6 @@ BaseType "Portal" "Added Chaos Damage Support" "Vaal"
 Class "Gem"
 SetFontSize 45
 SetBorderColor 30 150 180 255
-
-Show
-Class "Pantheon Soul" "Quest Items" "Trinket" "Heist Target" "Contract" "Blueprint" "Heist Cloak" "Heist Brooch" "Heist Gear" "Heist Tool"
-SetTextColor 74 230 56 255
-SetFontSize 45
-PlayEffect Green
-MinimapIcon 0 Green Circle
-SetBorderColor 74 230 56 255
-
-Show
-BaseType "Watchstone" "Maven's Invitation" "Stone of Passage" "Silver Key" "Golden Key" "Flashpowder Keg" "Treasure Key"
-SetTextColor 74 230 56 255
-SetFontSize 45
-PlayEffect Green
-MinimapIcon 0 Green Circle
-SetBorderColor 74 230 56 255
-
-Show
-Rarity = Rare
-Identified True 
 
 Show
 ItemLevel < 19 
@@ -568,6 +557,62 @@ SetBackgroundColor 0 0 0 255
 SetBorderColor 255 255 0 255
 
 Show
+ItemLevel < 10 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+DropLevel > 5 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 10 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+ItemLevel < 20 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+DropLevel > 20 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+ItemLevel < 30 
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 40 
+DropLevel > 30 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 50 
+DropLevel > 40 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 60 
+DropLevel > 50 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
+ItemLevel < 70 
+DropLevel > 60 
+Class "Two Hand Axes" "Two Hand Swords" "Two Hand Axes" "Warstaves"
+SetFontSize 40
+SetBackgroundColor 0 0 0 255
+SetBorderColor 255 255 0 255
+
+Show
 Class "Utility Flasks"
 ItemLevel < 68 
 SetFontSize 40
@@ -595,11 +640,11 @@ ItemLevel < 68
 
 Show
 Rarity = Magic
-ItemLevel < 15 
+ItemLevel < 12 
 
 Show
 Rarity = Normal
-ItemLevel < 3 
+ItemLevel < 5 
 
 Hide
 Class "Gem"

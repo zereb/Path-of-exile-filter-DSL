@@ -2614,13 +2614,48 @@ public class BaseTypes {
     public static final String ChronicleofAtzoatl = "Chronicle of Atzoatl";
     public static final String InscribedUltimatum = "Inscribed Ultimatum";
     public static final String SeaglassAmulet = "Seaglass Amulet";
-    public static final String BlessedBoots= "Blessed Boots";
+    public static final String FugitiveBoots = "Fugitive Boots";
     public static final String ApothecarysGloves = "Apothecary's Gloves";
     public static final String ArtilleryQuiver = "Artillery Quiver";
     public static final String IoliteRing = "Iolite Ring";
     public static final String GraspingMail = "Grasping Mail";
     public static final String RoguesMarker = "Rogue's Marker";
 
+    public static final String EnkindlingOrb = "Enkindling Orb";
+    public static final String InstillingOrb = "Instilling Orb";
+    public static final String ExoticCoinage = "Exotic Coinage";
+    public static final String ScrapMetal = "Scrap Metal";
+    public static final String Astragali = "Astragali";
+    public static final String BurialMedallion = "Burial Medallion";
+    public static final String LesserBrokenCircleArtifact = "Lesser Broken Circle Artifact";
+    public static final String CommonBrokenCircleArtifact = "Common Broken Circle Artifact";
+    public static final String GreaterBrokenCircleArtifact = "Greater Broken Circle Artifact";
+    public static final String GrandBrokenCircleArtifact = "Grand Broken Circle Artifact";
+    public static final String LesserBlackScytheArtifact = "Lesser Black Scythe Artifact";
+    public static final String CommonBlackScytheArtifact = "Common Black Scythe Artifact";
+    public static final String GreaterBlackScytheArtifact = "Greater Black Scythe Artifact";
+    public static final String GrandBlackScytheArtifact = "Grand Black Scythe Artifact";
+    public static final String LesserOrderArtifact = "Lesser Order Artifact";
+    public static final String CommonOrderArtifact = "Common Order Artifact";
+    public static final String GreaterOrderArtifact = "Greater Order Artifact";
+    public static final String GrandOrderArtifact = "Grand Order Artifact";
+    public static final String LesserSunArtifact = "Lesser Sun Artifact";
+    public static final String CommonSunArtifact = "Common Sun Artifact";
+    public static final String GreaterSunArtifact = "Greater Sun Artifact";
+    public static final String GrandSunArtifact = "Grand Sun Artifact";
+    public static final String ExpeditionLogbook = "Expedition Logbook";
+    public static final String RunicHelm = "Runic Helm";
+    public static final String RunicCrest = "Runic Crest";
+    public static final String RunicCrown = "Runic Crown";
+    public static final String RunicGreaves = "Runic Greaves";
+    public static final String RunicSollerets = "Runic Sollerets";
+    public static final String RunicSabatons = "Runic Sabatons";
+    public static final String RunicGloves = "Runic Gloves";
+    public static final String RunicGages = "Runic Gages";
+    public static final String RunicGauntlets = "Runic Gauntlets";
+    public static final String GoldFlask = "Gold Flask";
+    public static final String CorundumFlask = "Corundum Flask";
+    public static final String IronFlask = "Iron Flask";
 
 
 }

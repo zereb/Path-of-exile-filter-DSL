@@ -7,6 +7,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URISyntaxException;
+import java.util.Currency;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +26,16 @@ public class Main {
         System.setOut(fileOut);
 
 
+
+
        //curencies & bulk stuf
+       var exprditionCurency = List.of(
+               EnkindlingOrb, InstillingOrb, ExoticCoinage, ScrapMetal, Astragali, BurialMedallion,
+               LesserBrokenCircleArtifact, CommonBrokenCircleArtifact, GreaterBrokenCircleArtifact, GrandBrokenCircleArtifact,
+               LesserBlackScytheArtifact, CommonBlackScytheArtifact, GreaterBlackScytheArtifact, GrandBlackScytheArtifact,
+               LesserOrderArtifact, CommonOrderArtifact, GreaterOrderArtifact, GrandOrderArtifact, LesserSunArtifact, CommonSunArtifact, GreaterSunArtifact, GrandSunArtifact
+       );
+
         var fossils = List.of(
                 AberrantFossil, AethericFossil, BloodstainedFossil, BoundFossil, CorrodedFossil, DenseFossil,
                 EnchantedFossil, EncrustedFossil, FacetedFossil, FracturedFossil, FrigidFossil, GildedFossil,
@@ -148,7 +158,7 @@ public class Main {
         var atlasBases = List.of(
                 VermillionRing, CeruleanRing, OpalRing, SteelRing, IoliteRing,
                 BluePearlAmulet, MarbleAmulet, SeaglassAmulet, CrystalBelt,  VanguardBelt,
-                SpikedGloves, GrippedGloves, FingerlessSilkGloves, ApothecarysGloves, TwoTonedBoots, BlessedBoots,
+                SpikedGloves, GrippedGloves, FingerlessSilkGloves, ApothecarysGloves, TwoTonedBoots, FugitiveBoots,
                 ConvokingWand, BoneHelmet, GraspingMail, ArtilleryQuiver
         );
 
@@ -158,8 +168,16 @@ public class Main {
                 BlizzardCrown, WinterCrown, GaleCrown, ArchdemonCrown, DemonCrown, ImpCrown, AtonementMask, PenitentMask, SorrowMask
         );
 
+        var expeditionBases = List.of(
+                RunicHelm, RunicCrest, RunicCrown, RunicGreaves, RunicSollerets, RunicSabatons, RunicGloves, RunicGages, RunicGauntlets
+        );
+
 
         //currency & bulk
+        Show.block()
+                .poeClass(Currency)
+                .baseType(exprditionCurency)
+                .setStyle(Styles.splinters);
         Show.block()
                 .poeClass(Currency)
                 .baseType(topCurrency)
@@ -310,6 +328,7 @@ public class Main {
         var shaperList = new LinkedList<>(atlasBases);
         shaperList.addAll(craftingBases);
         shaperList.addAll(ritualBases);
+        shaperList.addAll(expeditionBases);
 
         Show.block()
                 .addPropperty("ItemLevel >= 84")
@@ -327,6 +346,9 @@ public class Main {
                 .setStyle(Styles.atlasBases).print();
         Show.block()
                 .baseType(ritualBases)
+                .setStyle(Styles.atlasBases).print();
+        Show.block()
+                .baseType(expeditionBases)
                 .setStyle(Styles.atlasBases).print();
 
 
@@ -432,27 +454,28 @@ public class Main {
                 .addPropperty("ItemLevel < 16")
                 .poeClass(Rings)
                 .setStyle(Styles.levleling).print();
-//        Show.block()
-//                .poeClass(meleeLeveling2h)
-//                .addPropperty("DropLevel > 5")
-//                .addPropperty("ItemLevel < 10")
-//                .setStyle(Styles.levleling).print();
+
+        Show.block()
+                .poeClass(meleeLeveling2h)
+                .addPropperty("DropLevel > 5")
+                .addPropperty("ItemLevel < 10")
+                .setStyle(Styles.levleling).print();
 //        Show.block()
 //                .poeClass(meleeLeveling1h)
 //                .addPropperty("DropLevel > 5")
 //                .addPropperty("ItemLevel < 10")
 //                .setStyle(Styles.levleling).print();
-//
-//
-//
-//        for (int i = 10; i <= 60; i += 10) {
-//            Show.block()
-//                    .poeClass(meleeLeveling2h)
-//                    .addPropperty("DropLevel > " + i)
-//                    .addPropperty("ItemLevel < " + (i + 10))
-//                    .setStyle(Styles.levleling).print();
-//
-//        }
+
+
+
+        for (int i = 10; i <= 60; i += 10) {
+            Show.block()
+                    .poeClass(meleeLeveling2h)
+                    .addPropperty("DropLevel > " + i)
+                    .addPropperty("ItemLevel < " + (i + 10))
+                    .setStyle(Styles.levleling).print();
+
+        }
 
         Show.block()
                 .addPropperty("ItemLevel < 68")
@@ -476,10 +499,10 @@ public class Main {
                 .rarity(Rarity.Magic)
                 .poeClass(List.of(Rings, Amulets, Belts));
         Show.block()
-                .addPropperty("ItemLevel < 15")
+                .addPropperty("ItemLevel < 12")
                 .rarity(Rarity.Magic).print();
         Show.block()
-                .addPropperty("ItemLevel < 3")
+                .addPropperty("ItemLevel < 5")
                 .rarity(Rarity.Normal).print();
 
         Hide.block()

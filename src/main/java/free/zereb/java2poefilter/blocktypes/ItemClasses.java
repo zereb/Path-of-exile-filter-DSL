@@ -87,4 +87,6 @@ public class ItemClasses {
     //ritual
 
     //ultimatum
+
+    public static final String ExpeditionLogbook = "Expedition Logbook";
 }
